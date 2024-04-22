@@ -6,10 +6,6 @@ class Word
     @text = text
   end
 
-  # returns a string representation of an object, including its class and instance
-  # variables as text.</verb>
-  # 
-  # @returns [Class] an object reference with the format `#<#<Class:0x...>]`.
   def inspect
     "#<#{self.class} #{text}>"
   end
