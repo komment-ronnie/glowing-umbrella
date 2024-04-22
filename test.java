@@ -26,6 +26,15 @@ public class IIRFilter {
     }
 
     
+    /**
+     * sets the coefficients for a neural network. It checks if the input arrays have the
+     * correct length and does not allow zero values in the first position, then assigns
+     * the coefficients to internal arrays.
+     * 
+     * @param aCoeffs 1st polynomial coefficients.
+     * 
+     * @param bCoeffs 2nd set of coefficients to be multiplied with the `aCoeffs`.
+     */
     public void setCoeffs(double[] aCoeffs, double[] bCoeffs) throws IllegalArgumentException {
         if (aCoeffs.length != order) {
             throw new IllegalArgumentException("aCoeffs must be of size " + order + ", got " + aCoeffs.length);
@@ -45,6 +54,15 @@ public class IIRFilter {
         }
     }
 
+    /**
+     * takes a sample value and applies a weighted sum of past values based on an order-0
+     * coeffients, updates history vectors using feedback mechanism.
+     * 
+     * @param sample 0th element of the sequence being processed, which is used to
+     * initialize the feedforward network's inputs.
+     * 
+     * @returns a calculated value representing the forecasted value of the target variable.
+     */
     public double process(double sample) {
         double result = 0.0;
 
