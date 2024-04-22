@@ -2,7 +2,6 @@ package com.thealgorithms.backtracking;
 import java.util.*;
 public class KnightsTour {
 
-
 public int size() {
     restartFromHead: for (;;) {
         int count = 0;
@@ -31,16 +30,6 @@ public int size() {
     private static int[][] grid; // chess grid
     private static int total; // total squares in chess
 
-    /**
-     * This function generates a random minefield grid with random mines and tries to
-     * find a path of live cells (i.e., non-mine) from the top left corner to the bottom
-     * right corner. If a solution is found (a path without stepping on any mines), it
-     * prints the solution; otherwise it just says "no result".
-     * 
-     * @param args There are no arguments passed to the main function here so there is
-     * nothing for the 'args' parameter to do. In a normal circumstance there should be
-     * an array of string inputs called 'args'.
-     */
     public static void main(String[] args) {
         grid = new int[base][base];
         total = (base - 4) * (base - 4);
