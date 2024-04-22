@@ -2,16 +2,6 @@ class Word
   include Comparable
   attr_reader :text
 
-  # sets the value of an instance variable called `@text` to the input parameter `text`.
-  # 
-  # @param text [String] code that will be documented, which is assigned to instance
-  # variable `@text`.
-  # 
-  # @returns [instance of `@text`.] the given text object stored in the instance
-  # variable `@text`.
-  # 
-  # 		- `@text`: The text variable assigned to is given the value passed in as the
-  # argument when the function is called.
   def initialize(text)
     @text = text
   end
