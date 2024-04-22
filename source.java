@@ -1,7 +1,22 @@
 package com.thealgorithms.backtracking;
 import java.util.*;
+/**
+ * is a Java program that solves Sudoku puzzles using a recursive algorithm. It takes
+ * a list of moves (possible movements of a knight on a chessboard) as input and uses
+ * them to solve the Sudoku puzzle by iteratively filling in cells based on their
+ * available neighbors. The class has several methods, including `size()` which returns
+ * the number of filled-in cells in the grid, `solve()` which tries to find a solution
+ * for the given row and column, and `orphanDetected()` which checks if there is an
+ * orphaned cell at the specified row and column.
+ */
 public class KnightsTour {
 
+    /**
+     * iterates through a linked list and returns the number of elements in the list,
+     * wrapping around to the beginning of the list when it reaches the end.
+     * 
+     * @returns the number of nodes in the circular linked list.
+     */
     public int size() {
         restartFromHead: for (;;) {
             int count = 0;
@@ -180,6 +195,10 @@ public class KnightsTour {
         return false;
     }
 
+    /**
+     * loops through a 2D array `grid` and prints each element, skipping any with value
+     * `-1`.
+     */
     private static void printResult() {
         for (int[] row : grid) {
             for (int i : row) {

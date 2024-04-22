@@ -1,5 +1,11 @@
 package com.thealgorithms.audiofilters;
 
+/**
+ * takes in an integer `order` and creates internal arrays for coefficients `coeffsA`
+ * and `coeffsB`, as well as history vectors `historyX` and `historyY`. The `setCoeffs()`
+ * method sets the coefficients for the neural network, and the `process()` method
+ * applies a weighted sum of past values and updates the history vectors using feedback.
+ */
 public class IIRFilter {
 
     private final int order;
