@@ -1,6 +1,16 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 
+/**
+ * @description searches a collection `slices` for the index of an element with the
+ * specified `id`.
+ * 
+ * @param { array } slices - array of objects to search for the specified `id`.
+ * 
+ * @param { integer } id - identifier of the slice to search for in the `slices` array.
+ * 
+ * @returns { integer } the index of the matching `id` within the input `slices` array.
+ */
 const _find = (slices, id) => {
   return slices.findIndex((entry) => entry.id === id);
 };
@@ -245,6 +255,83 @@ const Pie = ({
        * 
        * @param { object } theme - overall style and design of the visualization, including
        * the text font family and size.
+       */}
+      {/**
+       * @description generates a pie chart with a responsive inner radius, border width,
+       * and colors based on the given data. It also provides tooltips for each slice and
+       * enables link labels when there are more than one slice.
+       * 
+       * @param { object } data - 0-based indexed array of data points for generating the
+       * pie chart, which are used to calculate the inner and outer radii, angle offset,
+       * and other properties of the chart.
+       * 
+       * @param { array } colors - 2 colors used to generate the arc labels and link, with
+       * the first color (`unique > 0 ? ["#26de81"] : ["#5a646a"]`) being used for the inner
+       * arc and the second color (`"#eceded"`)` being used for the arc links and labels.
+       * 
+       * @param { number } margin - 80-pixel buffer around the outer edges of the circle,
+       * used to ensure clearance and avoid overlapping with neighboring elements or labels.
+       * 
+       * @param { number } innerRadius - innermost radius of each slice within the donut
+       * chart, which affects the visual representation of each slice's area.
+       * 
+       * @param { number } padAngle - angle of the arc label's border around the outer
+       * circumference, which can help to prevent overlapping labels and provide a more
+       * consistent appearance for the arc labels.
+       * 
+       * @param { integer } activeOuterRadiusOffset - 8-pixel offset added to the outer
+       * radius of the pie chart when the link is active, helping to improve the visualization
+       * of the arc labels.
+       * 
+       * @param { number } borderWidth - width of the border surrounding the pie chart,
+       * which can be used to adjust the visual appearance of the chart.
+       * 
+       * @param { `color` or more specifically a/an  `rgbaColor`. } borderColor - color of
+       * the border surrounding the pie chart, with modifications to its darkness level
+       * through the use of modifiers.
+       * 
+       * 		- `from`: The source of the color value. In this case, it is `color`, which means
+       * that the color will be drawn from a palette of colors defined in the `colors` object.
+       * 		- `modifiers`: An array of objects containing modifier functions that can be
+       * applied to the color value. In this case, there is one modifier function called
+       * `darker`, with a value of 0.2. This means that the color will be darkened by 20%
+       * of its original value.
+       * 
+       * 	Overall, the `borderColor` property defines the color and modifiers for the border
+       * of the responsive pie chart.
+       * 
+       * @param { boolean } enableArcLinkLabels - presence or absence of link labels on the
+       * arcs of the pie chart, and when set to `true`, it enables link labels for each arc
+       * segment based on its corresponding contrib percentage value.
+       * 
+       * @param { boolean } enableArcLabels - state of an arc label feature on the ResponsivePie
+       * component, with a value of `false` indicating that labels are disabled and a value
+       * of `true` indicating that labels are enabled.
+       * 
+       * @param { string } arcLinkLabelsTextColor - color of the labels displayed on the
+       * arc when a link is clicked, with the specified value of `#eceded` indicating a
+       * light gray color.
+       * 
+       * @param { number } arcLinkLabelsThickness - 3D line width of the labels attached
+       * to the arcs in the donut chart, and determines how thick the lines will be displayed.
+       * 
+       * @param { color. } arcLinkLabelsColor - color of the labels displayed along the
+       * circumference of the pie chart, which can be defined using a color value or a
+       * modifier to adjust the color based on the dataset's darkness level.
+       * 
+       * 		- `from`: The property 'color' specifies the source for determining the color value.
+       * 		- `modifiers`: An array containing a single object with a 'darker' property set
+       * to 0.2, which adjusts the brightness of the color.
+       * 
+       * 	The `arcLinkLabelsColor` property has an Object value that is generated dynamically
+       * based on these properties.
+       * 
+       * @param { Component } tooltip - tooltip content to be displayed when the user hovers
+       * over the pie chart, which is defined as a JavaScript function that returns a React
+       * component containing the desired tooltip text and layout.
+       * 
+       * @param { object } theme - overall visual style of the chart, including typography
+       * and colors, through its nested `text` object that defines font family and font size.
        */}
       <ResponsivePie
         data={datum}
