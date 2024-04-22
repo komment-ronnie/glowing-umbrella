@@ -1,17 +1,6 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 
-/**
- * @description locates the index of an element in an array of objects, given its `id`.
- * 
- * @param { array } slices - array of objects that contain an `id` property, which
- * is used to locate the specific object with the matching `id`.
- * 
- * @param { number } id - unique identifier of the slice for which the function is
- * searching its index in the `slices` array.
- * 
- * @returns { number } an index of the target `id` within the array of `slices`.
- */
 const _find = (slices, id) => {
   return slices.findIndex((entry) => entry.id === id);
 };
