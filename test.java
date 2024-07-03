@@ -1,10 +1,11 @@
 package com.thealgorithms.audiofilters;
 
 /**
- * takes in an integer `order` and creates internal arrays for coefficients `coeffsA`
- * and `coeffsB`, as well as history vectors `historyX` and `historyY`. The `setCoeffs()`
- * method sets the coefficients for the neural network, and the `process()` method
- * applies a weighted sum of past values and updates the history vectors using feedback.
+ * Is used to implement an Internal Model (IIR) filter, which is a type of recurrent
+ * neural network (RNN). The class takes in the order of the filter, as well as
+ * coefficients for the two polynomial terms that make up the filter. The `process`
+ * method takes in a sample value and applies the weighted sum of past values based
+ * on the coefficient values, updating the history vectors using feedback mechanism.
  */
 public class IIRFilter {
 
@@ -33,13 +34,25 @@ public class IIRFilter {
 
     
     /**
-     * sets the coefficients for a neural network. It checks if the input arrays have the
-     * correct length and does not allow zero values in the first position, then assigns
-     * the coefficients to internal arrays.
+     * Sets the coefficients of a and b based on user input. It checks that the length
+     * of `aCoeffs` is equal to `order`, and that `aCoeffs[0]` is not zero. Finally, it
+     * assigns the values of `aCoeffs` and `bCoeffs` to the `coeffsA` and `coeffsB` arrays
+     * respectively.
      * 
-     * @param aCoeffs 1st polynomial coefficients.
+     * @param aCoeffs 1D array of coefficients for the linear combination of polynomial
+     * terms in the `setCoeffs()` method.
      * 
-     * @param bCoeffs 2nd set of coefficients to be multiplied with the `aCoeffs`.
+     * * Length: `aCoeffs.length` must equal `order`, which is a constant integer specified
+     * in the function definition.
+     * * Non-zero value: The first element of `aCoeffs`, `aCoeffs.get(0)`, must not be zero.
+     * 
+     * @param bCoeffs 2nd array of coefficients that are used to compute the output of
+     * the `setCoeffs` function.
+     * 
+     * * `bCoeffs` has length `order`, which is the same as the output coeffs generated
+     * by the function.
+     * * The elements of `bCoeffs` are taken from a set of values, possibly including
+     * zero and non-zero numbers.
      */
     public void setCoeffs(double[] aCoeffs, double[] bCoeffs) throws IllegalArgumentException {
         if (aCoeffs.length != order) {
@@ -61,13 +74,14 @@ public class IIRFilter {
     }
 
     /**
-     * takes a sample value and applies a weighted sum of past values based on an order-0
-     * coeffients, updates history vectors using feedback mechanism.
+     * Takes a sample value, processes it through a set of coefficients, and returns the
+     * processed value with feedback applied to previous values.
      * 
-     * @param sample 0th element of the sequence being processed, which is used to
-     * initialize the feedforward network's inputs.
+     * @param sample initial value of the feedback loop, which is used to calculate the
+     * output result in the `process()` function.
      * 
-     * @returns a calculated value representing the forecasted value of the target variable.
+     * @returns a double value representing the result of feeding a given input sample
+     * through a recurrent neural network.
      */
     public double process(double sample) {
         double result = 0.0;

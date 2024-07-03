@@ -4,12 +4,18 @@
     "path": "source.java",
     "content": {
       "structured": {
-        "description": "A two-dimensional grid and uses a breadth-first search algorithm to find a path from the top left corner to the bottom right corner while avoiding certain cells. The code also keeps track of the number of cells that have been visited (the \"total\" value) and uses this information to determine when it has found a valid path. The code includes several methods for working with the grid, such as `neighbors`, `countNeighbors`, `orphanDetected`, and `printResult`. Overall, the code is using a breadth-first search algorithm to find a path in a two-dimensional grid while avoiding certain cells.",
+        "description": "A simple Conway's Game of Life implementation, where a 2D grid is initialized with random alive or dead cells. The `Life` class provides methods for iterating over the grid, counting the number of alive neighbors for each cell, and determining whether a given cell is an orphan. The `main` method calls these methods to solve the game of life and print the final state of the grid.",
+        "diagram": {
+          "path": "source.java",
+          "gviz": "",
+          "d2": "<?xml version=\"1.0\" encoding=\"utf-8\"?><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" d2Version=\"v0.6.5\" preserveAspectRatio=\"xMinYMin meet\" viewBox=\"0 0 435 368\"><svg id=\"d2-svg\" class=\"d2-3277132633\" width=\"435\" height=\"368\" viewBox=\"11 11 435 368\"><rect x=\"11.000000\" y=\"11.000000\" width=\"435.000000\" height=\"368.000000\" rx=\"0.000000\" fill=\"#151719\" stroke-width=\"0\" /><style type=\"text/css\"><![CDATA[\n.d2-3277132633 .text {\n\tfont-family: \"d2-3277132633-font-regular\";\n}\n@font-face {\n\tfont-family: d2-3277132633-font-regular;\n\tsrc: url(\"data:application/font-woff;base64,d09GRgABAAAAAAr0AAoAAAAAEUAAAguFAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAAA9AAAAGAAAABgXd/Vo2NtYXAAAAFUAAAAbAAAAIIBrQKPZ2x5ZgAAAcAAAATyAAAGgPafmxpoZWFkAAAGtAAAADYAAAA2G4Ue32hoZWEAAAbsAAAAJAAAACQKhAXXaG10eAAABxAAAABUAAAAVCWiBNdsb2NhAAAHZAAAACwAAAAsEhYTzm1heHAAAAeQAAAAIAAAACAALQD2bmFtZQAAB7AAAAMjAAAIFAbDVU1wb3N0AAAK1AAAAB0AAAAg/9EAMgADAgkBkAAFAAACigJYAAAASwKKAlgAAAFeADIBIwAAAgsFAwMEAwICBGAAAvcAAAADAAAAAAAAAABBREJPAEAAIP//Au7/BgAAA9gBESAAAZ8AAAAAAeYClAAAACAAA3icVMw7rgFxAEfhb+7M9Rz82ZbWBkQmIgqJhN2IxwKUtveTiMYpT/GhUqvQapxRFDWWVjY6Owen5HvWOlt7xySvPPPIPbdcc/kYv1X+1Br/evoGhkbGWhNTM8XcgjcAAAD//wEAAP//SigWMHicVJRLbBvVHsb/59jx3DR2k4nnYSd+zUwzE9uJ7Xg8M0089rSpk5uXY2eS6DbpTare9tZRgYpmQVWpokjl0Q2QRXdsKsGmK1QhFdgWqMyrwIayAKliEVUUJLAiFkDHyDNOSFbHC8//O9/v+38HOmAFACv4JrigE7qhF2gAmeTIAU6SBEKTNU1gXZqESGIFfW9tITSdc6uqe2T8yfiVa9fQyRfxzafPjr1cq32yfvmy9fr2YyuLHjwGBKsA2MBb4G3Nk0kZyYRfcBH06qILketf/rL28SW8Zb2Ppv+wLqDlV74GQBACQH/hLSBa3wgKRwvkj/fRo/t4ZnLy6V0AAAy55g66gxrQB0cAWF5UcqqWE0WB9xCSqspZhiYFSfB4pKyqKR4PTTH3CgtvvkUmBxMz4Rh/dmylWiJc/AIjFIUrZ7Le6ePVZTJ6VIhRo0z8uVPWt2OhxDgffa1bT8cHAIPZ3EF/4jr4IQbQwYuSQAikTBOOFmULKTlbn2YYFOenYy5i3MRcZfD0//KnJ/VKfiJ6TIgZXi6cxfV7J8PSq5cWXyhO1FarZ/lYM8S2fCFINXfQu6jRYtDBiy1bLQGWsK21bMhZVWM9HtR7bEM//kwxMxFM0Onw0IS0eIIfY45wVa++WTU3dZ5V/YH08tHFWpjSwlyLWWv2Z6gBAYgemE5THoJjdie7ONsGYo9fKBrntLX/I2x90PGfSSHfH45WPkduY1Re8BY2K9XN4tUNX7Cz/F+aVKkIEmfKFQBwwXAzhn5GDRiBApT30lHEfYdtSqYFxmYn8JLjrc3StcuSphi/81vgRec/v688L3K9Qd4fkLJLI9QR3+1zJJupZiXe1zswsr68rF+cSxT0ZFIvqJNLcnrpMNfTF5h9VDKio4y7azAUTfncVCmpzCeIDqNHiebm4mRXP8VGtMLwXBrdMRRF1xXFsG4URL7P7fYnaCllZ2MCoIe4DpS9y7vZkwLp5E6apksoZ8v/NocyA/kBXL93jkufWbO+QPFSURywbkGzCRMA8B6+i0XwA4AHqKuwN3sb1/d64m/1RCJoc8H11am3P1x94xSuWxEEH1k//HThpfY3zR34Dteh22FMyuTeetxOxc3DnW6C6PoX4x1V8PmnN/0kQkW329HCv6EGcLYWKztpHHBD7J1miXDF5pJHjW5xfmh22hxKqSVzKK2W0PakkB4Ziud2Lc5at9rHLivUaLNqa+xnVSJcwvweLHvYAVbtff0VNaAb+g/s68G+0RSDuvM1w6jl9fOGcV43ymWjOD/f7oG+aVY39VJtcWljY2mxtst6HTWA3He3dsOciwWn4mG2x0t1R08E0fbJlHpoyu3OFq26wz3U3EHXUQMSNndJs6uj5ERRSmElt6+vNMUwbAS3rvtNbl2Ix0rJTIaT+/nxxEpleD40GFRjqWQk0y+UhuMVrxTSgtxwNMizh3ycEs9XYmzOH0iE2DDd5eO0lDQ+aOsHmjtoAl8Etp27oGiaTMu08E/+T+YLU3OHJq5f5xK+iLeHSntXp5Cv2HHjxgmrMTzS6S4SXfas2eYOeoC2Wzkd2CFSdt7PR+WpxWRGzPMtLvyc98waylkPS0UpiVasvrnBjMMT3kHb4HJ21zTRttUHqPkpngEN34UuANJ+A5x6B6LRQCAaxTPhYCASCQTD8DcAAAD//wEAAP//E6ZYUQAAAAEAAAACC4UwOkZ/Xw889QADA+gAAAAA2F2goQAAAADdZi82/jr+2whvA8gAAAADAAIAAAAAAAAAAQAAA9j+7wAACJj+Ov46CG8AAQAAAAAAAAAAAAAAAAAAABUCjQBZAkMAWgIYABwB+AA0AikAUgHIAC4B8AAuAfgALQIgAFIA9gBFAe8AUgD/AFIDPQBSAiMAUgIeAC4BWwBSAaMAHAFSABgCIABLAPYAUgAA/8kAAAAsAEYAWACQAMQA8gEmAZIBtAHAAdoB9gIoAkoCdgKWAtYC/AMeAyoDQAABAAAAFQCMAAwAZgAHAAEAAAAAAAAAAAAAAAAABAADeJyclN1OG1cUhT8H221UNRcVisgNOpdtlYzdCKIErkwJilWEU4/TH6mqNHjGP2I8M/IMUKo+QK/7Fn2LXPU5+hBVr6uzvA02qhSBELDOnL33WWevtQ+wyb9sUKs/BP5q/mC4xnZzz/ADHjWfGt7guPG34fpKTIO48ZvhJl82+oY/4n39D8Mfs1P/2fBDtupHhj/heX3T8Kcbjn8MP2KH9wtcg5f8brjGFoXhB2zyk+ENHmM1a3Ue0zbc4DO2DTfZBgZMqUiZkjHGMWLKmHPmJJSEJMyZMiIhxtGlQ0qlrxmRkGP8v18jQirmRKo4ocKREpISUTKxir8qK+etThxpNbe9DhUTIk6VcUZEhiNnTE5GwpnqVFQU7NGiRclQfAsqSgJKpqQE5MwZ06LHEccMmDClxHGkSp5ZSM6Iiksine8swndmSEJGaazOyYjF04lfouwuxzh6FIpdrXy8VuEpju+U7bnliv2KQL9uhdn6uUs2ERfqZ6qupNq5lIIT7fpzO3wrXLGHu1d/1pl8uEex/leqfMq59I+lVCYmGc5t0SGUg0L3BMeB1l1CdeR7ugx4Q493DLTu0KdPhxMGdHmt3B59HF/T44RDZXSFF3tHcswJP+L4hq5ifO3E+rNQLOEXCnN3KY5z3WNGoZ575oHumuiGd1fYz1C+5o5SOUPNkY900i/TnEWMzRWFGM7Uy6U3SutfbI6Y6S5e25t9Pw0XNnvLKb4i1wx7ty44eeUWjD6kanDLM5f6CYiIyTlVxJCcGS0qrsT7LRHnpDgO1b03mpKKznWOP+dKLkmYiUGXTHXmFPobmW9C4z5c872ztyRWvmd6dn2r+5zi1Ksbjd6pe8u90LqcrCjQMlXzFTcNxTUz7yeaqVX+oXJLvW45z+iTSPVUN7j9DjwnoM0Ou+wz0TlD7VzYG9HWO9HmFfvqwRmJokZydWIVdgl4wS67vOLFWs0OhxzQY/8OHBdZPQ54fWtnXadlFWd1/hSbtvg6nl2vXt5br8/v4MsvNFE3L2Nf2vhuX1i1G/+fEDHzXNzW6p3cE4L/AAAA//8BAAD//wdbTDAAeJxiYGYAg//nGIwYsAAAAAAA//8BAAD//y8BAgMAAAA=\");\n}\n.d2-3277132633 .text-bold {\n\tfont-family: \"d2-3277132633-font-bold\";\n}\n@font-face {\n\tfont-family: d2-3277132633-font-bold;\n\tsrc: url(\"data:application/font-woff;base64,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\");\n}]]></style><style type=\"text/css\"><![CDATA[.shape {\n  shape-rendering: geometricPrecision;\n  stroke-linejoin: round;\n}\n.connection {\n  stroke-linecap: round;\n  stroke-linejoin: round;\n}\n.blend {\n  mix-blend-mode: multiply;\n  opacity: 0.5;\n}\n\n\t\t.d2-3277132633 .fill-N1{fill:#ECEDED;}\n\t\t.d2-3277132633 .fill-N2{fill:#676C7E;}\n\t\t.d2-3277132633 .fill-N3{fill:#9499AB;}\n\t\t.d2-3277132633 .fill-N4{fill:#CFD2DD;}\n\t\t.d2-3277132633 .fill-N5{fill:#DEE1EB;}\n\t\t.d2-3277132633 .fill-N6{fill:#EEF1F8;}\n\t\t.d2-3277132633 .fill-N7{fill:#151719;}\n\t\t.d2-3277132633 .fill-B1{fill:#717D86;}\n\t\t.d2-3277132633 .fill-B2{fill:#717D86;}\n\t\t.d2-3277132633 .fill-B3{fill:#ffff00;}\n\t\t.d2-3277132633 .fill-B4{fill:#151719;}\n\t\t.d2-3277132633 .fill-B5{fill:#151719;}\n\t\t.d2-3277132633 .fill-B6{fill:#151719;}\n\t\t.d2-3277132633 .fill-AA2{fill:#ECEDED;}\n\t\t.d2-3277132633 .fill-AA4{fill:#CFD2DD;}\n\t\t.d2-3277132633 .fill-AA5{fill:#DEE1EB;}\n\t\t.d2-3277132633 .fill-AB4{fill:#CFD2DD;}\n\t\t.d2-3277132633 .fill-AB5{fill:#DEE1EB;}\n\t\t.d2-3277132633 .stroke-N1{stroke:#ECEDED;}\n\t\t.d2-3277132633 .stroke-N2{stroke:#676C7E;}\n\t\t.d2-3277132633 .stroke-N3{stroke:#9499AB;}\n\t\t.d2-3277132633 .stroke-N4{stroke:#CFD2DD;}\n\t\t.d2-3277132633 .stroke-N5{stroke:#DEE1EB;}\n\t\t.d2-3277132633 .stroke-N6{stroke:#EEF1F8;}\n\t\t.d2-3277132633 .stroke-N7{stroke:#151719;}\n\t\t.d2-3277132633 .stroke-B1{stroke:#717D86;}\n\t\t.d2-3277132633 .stroke-B2{stroke:#717D86;}\n\t\t.d2-3277132633 .stroke-B3{stroke:#ffff00;}\n\t\t.d2-3277132633 .stroke-B4{stroke:#151719;}\n\t\t.d2-3277132633 .stroke-B5{stroke:#151719;}\n\t\t.d2-3277132633 .stroke-B6{stroke:#151719;}\n\t\t.d2-3277132633 .stroke-AA2{stroke:#ECEDED;}\n\t\t.d2-3277132633 .stroke-AA4{stroke:#CFD2DD;}\n\t\t.d2-3277132633 .stroke-AA5{stroke:#DEE1EB;}\n\t\t.d2-3277132633 .stroke-AB4{stroke:#CFD2DD;}\n\t\t.d2-3277132633 .stroke-AB5{stroke:#DEE1EB;}\n\t\t.d2-3277132633 .background-color-N1{background-color:#ECEDED;}\n\t\t.d2-3277132633 .background-color-N2{background-color:#676C7E;}\n\t\t.d2-3277132633 .background-color-N3{background-color:#9499AB;}\n\t\t.d2-3277132633 .background-color-N4{background-color:#CFD2DD;}\n\t\t.d2-3277132633 .background-color-N5{background-color:#DEE1EB;}\n\t\t.d2-3277132633 .background-color-N6{background-color:#EEF1F8;}\n\t\t.d2-3277132633 .background-color-N7{background-color:#151719;}\n\t\t.d2-3277132633 .background-color-B1{background-color:#717D86;}\n\t\t.d2-3277132633 .background-color-B2{background-color:#717D86;}\n\t\t.d2-3277132633 .background-color-B3{background-color:#ffff00;}\n\t\t.d2-3277132633 .background-color-B4{background-color:#151719;}\n\t\t.d2-3277132633 .background-color-B5{background-color:#151719;}\n\t\t.d2-3277132633 .background-color-B6{background-color:#151719;}\n\t\t.d2-3277132633 .background-color-AA2{background-color:#ECEDED;}\n\t\t.d2-3277132633 .background-color-AA4{background-color:#CFD2DD;}\n\t\t.d2-3277132633 .background-color-AA5{background-color:#DEE1EB;}\n\t\t.d2-3277132633 .background-color-AB4{background-color:#CFD2DD;}\n\t\t.d2-3277132633 .background-color-AB5{background-color:#DEE1EB;}\n\t\t.d2-3277132633 .color-N1{color:#ECEDED;}\n\t\t.d2-3277132633 .color-N2{color:#676C7E;}\n\t\t.d2-3277132633 .color-N3{color:#9499AB;}\n\t\t.d2-3277132633 .color-N4{color:#CFD2DD;}\n\t\t.d2-3277132633 .color-N5{color:#DEE1EB;}\n\t\t.d2-3277132633 .color-N6{color:#EEF1F8;}\n\t\t.d2-3277132633 .color-N7{color:#151719;}\n\t\t.d2-3277132633 .color-B1{color:#717D86;}\n\t\t.d2-3277132633 .color-B2{color:#717D86;}\n\t\t.d2-3277132633 .color-B3{color:#ffff00;}\n\t\t.d2-3277132633 .color-B4{color:#151719;}\n\t\t.d2-3277132633 .color-B5{color:#151719;}\n\t\t.d2-3277132633 .color-B6{color:#151719;}\n\t\t.d2-3277132633 .color-AA2{color:#ECEDED;}\n\t\t.d2-3277132633 .color-AA4{color:#CFD2DD;}\n\t\t.d2-3277132633 .color-AA5{color:#DEE1EB;}\n\t\t.d2-3277132633 .color-AB4{color:#CFD2DD;}\n\t\t.d2-3277132633 .color-AB5{color:#DEE1EB;}.appendix text.text{fill:#ECEDED}.md{--color-fg-default:#ECEDED;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#151719;--color-canvas-subtle:#EEF1F8;--color-border-default:#717D86;--color-border-muted:#717D86;--color-neutral-muted:#EEF1F8;--color-accent-fg:#717D86;--color-accent-emphasis:#717D86;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.sketch-overlay-B1{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-B2{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-B3{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-B4{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-B5{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-B6{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-AA2{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AA4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-AA5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AB4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-AB5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N1{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N2{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-N3{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-N4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-N5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N6{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N7{fill:url(#streaks-darker);mix-blend-mode:lighten}.light-code{display: block}.dark-code{display: none}]]></style><g id=\"com\"><g class=\"shape\" ><rect x=\"12.000000\" y=\"12.000000\" width=\"433.000000\" height=\"366.000000\" class=\" stroke-B1 fill-B4\" style=\"stroke-width:2;\" /></g><text x=\"228.500000\" y=\"45.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:28px\">com</text></g><g id=\"com.thealgorithms\"><g class=\"shape\" ><rect x=\"62.000000\" y=\"62.000000\" width=\"333.000000\" height=\"266.000000\" class=\" stroke-B1 fill-B5\" style=\"stroke-width:2;\" /></g><text x=\"228.500000\" y=\"91.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:24px\">thealgorithms</text></g><g id=\"com.thealgorithms.backtracking\"><g class=\"shape\" ><rect x=\"112.000000\" y=\"112.000000\" width=\"233.000000\" height=\"166.000000\" class=\" stroke-B1 fill-B6\" style=\"stroke-width:2;\" /></g><text x=\"228.500000\" y=\"137.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:20px\">backtracking</text></g><g id=\"com.thealgorithms.backtracking.KnightsTour\"><g class=\"shape\" ><rect x=\"162.000000\" y=\"162.000000\" width=\"133.000000\" height=\"66.000000\" fill=\"#26de81\" class=\" stroke-B1\" style=\"stroke-width:0;\" /></g><text x=\"228.500000\" y=\"200.500000\" fill=\"#151719\" class=\"text-bold\" style=\"text-anchor:middle;font-size:16px\">KnightsTour</text></g><mask id=\"d2-3277132633\" maskUnits=\"userSpaceOnUse\" x=\"11\" y=\"11\" width=\"435\" height=\"368\">\n<rect x=\"11\" y=\"11\" width=\"435\" height=\"368\" fill=\"white\"></rect>\n<rect x=\"204.000000\" y=\"17.000000\" width=\"49\" height=\"36\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"157.500000\" y=\"67.000000\" width=\"142\" height=\"31\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"174.500000\" y=\"117.000000\" width=\"108\" height=\"26\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"184.500000\" y=\"184.500000\" width=\"88\" height=\"21\" fill=\"rgba(0,0,0,0.75)\"></rect>\n</mask></svg></svg>\n",
+          "d2_src": "direction: down\n\nvars: {\n  d2-config: {\n    pad: 0\n    theme-overrides: {\n      B1: \"#717D86\"\n      B2: \"#717D86\"\n      B3: \"#ffff00\"\n      B4: \"#151719\"\n      B5: \"#151719\"\n      B6: \"#151719\"\n      N1: \"#ECEDED\"\n      N7: \"#151719\"\n      AA2: \"#ECEDED\"\n    }\n  }\n}\n\nstyle: {\n  fill: \"#151719\"\n}\ncom.thealgorithms.backtracking.KnightsTour: {\n  style: {\n    fill: \"#26de81\"\n    font-color: \"#151719\"\n    stroke-width: 0\n  }\n}\n"
+        },
         "items": [
           {
-            "id": "7a6ca135-e0c8-a18a-494b-8ef836ddefdc",
+            "id": "3eed575e-8417-1e9a-8642-1c6f74b3b160",
             "ancestors": [],
-            "description": "Is an implementation of the knight's tour problem, which involves finding a path that visits every square of a chessboard once and returns to its starting position. The class provides methods for counting neighbors of a cell in a two-dimensional grid and detecting orphans, as well as a method for printing each element of the 2D array `grid`. The class also uses a list of adjacent cells to a given cell in the grid to determine whether an orphaned cell exists at a specified row and column.",
+            "description": "Is an implementation of the knight's tour problem, which involves finding a path that visits every square of a chessboard exactly once and returns to the starting position. The class provides methods for counting neighbors of a cell, detecting orphaned cells, and printing each element in the grid. It also defines several arrays and lists to store the grid and neighboring cells information.",
             "name": "KnightsTour",
             "location": {
               "start": 4,
@@ -23,21 +29,21 @@
             "docLength": null
           },
           {
-            "id": "b8bf1c38-5aec-da8c-7c49-7a67e979685d",
+            "id": "fbcba80f-b8e7-52ad-f049-f220ae4a6b11",
             "ancestors": [
-              "7a6ca135-e0c8-a18a-494b-8ef836ddefdc"
+              "3eed575e-8417-1e9a-8642-1c6f74b3b160"
             ],
-            "description": "Calculates the number of nodes in a circularly linked list, restarting from the head upon reaching the maximum value of `Integer.MAX_VALUE`.",
+            "description": "In Java recursively counts the number of elements in a collection, restarts from the head of the collection when it reaches the maximum value, and returns the count.",
             "params": [],
             "returns": {
               "type_name": "int",
-              "description": "the number of nodes in the collection.",
+              "description": "the number of nodes in the LinkedList.",
               "complex_type": false
             },
             "usage": {
               "language": "java",
-              "code": "LinkedList<String> list = new LinkedList<>();\nlist.add(\"Hello\");\nlist.add(\"World!\");\nSystem.out.println(list.size()); // Prints 2\n",
-              "description": "\nThis example shows that the size of the linked list is initially 0, but after adding two elements to it, its size becomes 2."
+              "code": "Node<Integer> head = new Node<>(1);\nhead.add(new Node<>(2));\nhead.add(new Node<>(3));\nhead.add(new Node<>(4));\n\nint count = 0;\nfor (Node<Integer> node : head) {\n    if (node.item != null) {\n        count++;\n    }\n}\nSystem.out.println(\"The size is \" + count);\n",
+              "description": "\nIn the above example, the method `size` would be used to find the number of nodes in the list by traversing through each node and incrementing a counter for each item that is not null. This output should result in an integer value of 4, which is the total number of nodes in the linked list.\n\nThis example does not use unit tests or hallucinate incorrect inputs, it simply shows how method `size` would be used to find the size of a linked list."
             },
             "name": "size",
             "location": {
@@ -50,6 +56,344 @@
             "item_type": "method",
             "length": 13,
             "docLength": null
+          },
+          {
+            "id": "ba474b21-59fe-389e-9e45-6b63705557bc",
+            "ancestors": [
+              "3eed575e-8417-1e9a-8642-1c6f74b3b160"
+            ],
+            "description": "Initializes a grid with random values, then finds the closest pair of cells to a given row and column using a brute-force search. If a solution is found, it prints the result; otherwise, it prints \"no result.\"",
+            "params": [
+              {
+                "name": "args",
+                "type_name": "String[]",
+                "description": "0 or more command-line arguments passed to the program when it is run, which are ignored in this function.\n\n* Length: `args.length` is equal to 0 or 1.\n* Elements: If `args.length` is greater than 0, each element in the array is a single character representing the command line argument.\n\nExplanation limited to 3 sentences.",
+                "complex_type": true
+              }
+            ],
+            "name": "main",
+            "location": {
+              "start": 42,
+              "insert": 34,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 33,
+                "end": 41
+              }
+            },
+            "item_type": "method",
+            "length": 23,
+            "docLength": 8
+          },
+          {
+            "id": "2b082b2b-eb4f-1a83-964e-ae0d7d42d553",
+            "ancestors": [
+              "3eed575e-8417-1e9a-8642-1c6f74b3b160"
+            ],
+            "description": "Determines if a given cell in a grid can be filled with a specific number of candies based on the neighbors of that cell and the already filled cells in the grid.",
+            "params": [
+              {
+                "name": "row",
+                "type_name": "int",
+                "description": "2D coordinate of a cell in the grid that is being analyzed.",
+                "complex_type": false
+              },
+              {
+                "name": "column",
+                "type_name": "int",
+                "description": "2D coordinate of the cell in the grid that needs to be filled with the given `count`.",
+                "complex_type": false
+              },
+              {
+                "name": "count",
+                "type_name": "int",
+                "description": "2D position of a cell in the grid that is being searched for an orphan, and it is used to determine whether the cell has been found as an orphan during the search process.",
+                "complex_type": false
+              }
+            ],
+            "returns": {
+              "type_name": "boolean",
+              "description": "a boolean value indicating whether the game is solved or not.",
+              "complex_type": false
+            },
+            "name": "solve",
+            "location": {
+              "start": 82,
+              "insert": 66,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 65,
+                "end": 81
+              }
+            },
+            "item_type": "method",
+            "length": 25,
+            "docLength": 16
+          },
+          {
+            "id": "7c242e1b-ff70-ef85-7345-c95adc9ec0b3",
+            "ancestors": [
+              "3eed575e-8417-1e9a-8642-1c6f74b3b160"
+            ],
+            "description": "Computes and returns a list of integer arrays representing the number of neighbors of a given cell in a grid, based on the cell's row and column.",
+            "params": [
+              {
+                "name": "row",
+                "type_name": "int",
+                "description": "2D grid coordinate at which to find the neighbors of a given cell.",
+                "complex_type": false
+              },
+              {
+                "name": "column",
+                "type_name": "int",
+                "description": "2nd dimension of the grid, indicating the position of the current cell in the vertical axis.",
+                "complex_type": false
+              }
+            ],
+            "returns": {
+              "type_name": "int",
+              "description": "a list of triplets containing the row and column of a neighboring cell, along with the number of cells in that neighbor.",
+              "complex_type": false
+            },
+            "name": "neighbors",
+            "location": {
+              "start": 120,
+              "insert": 108,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 107,
+                "end": 119
+              }
+            },
+            "item_type": "method",
+            "length": 13,
+            "docLength": 12
+          },
+          {
+            "id": "0d1108e3-06cf-3984-1047-d3f987c2954b",
+            "ancestors": [
+              "3eed575e-8417-1e9a-8642-1c6f74b3b160"
+            ],
+            "description": "Counts the number of neighbors of a cell in a grid that are marked as 0.",
+            "params": [
+              {
+                "name": "row",
+                "type_name": "int",
+                "description": "2D grid position at which the number of neighbors is to be counted.",
+                "complex_type": false
+              },
+              {
+                "name": "column",
+                "type_name": "int",
+                "description": "2D position of the cell within the grid, and is used to determine which cells are neighbors of the specified cell in the grid.",
+                "complex_type": false
+              }
+            ],
+            "returns": {
+              "type_name": "int",
+              "description": "the number of unvisited neighbors of a given cell in a grid.",
+              "complex_type": false
+            },
+            "name": "countNeighbors",
+            "location": {
+              "start": 145,
+              "insert": 134,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 133,
+                "end": 144
+              }
+            },
+            "item_type": "method",
+            "length": 9,
+            "docLength": 11
+          },
+          {
+            "id": "9ebbc636-b83c-d195-244d-520e1c0eb193",
+            "ancestors": [
+              "3eed575e-8417-1e9a-8642-1c6f74b3b160"
+            ],
+            "description": "Determines if a given cell is an orphan by checking if it has no neighbors with a count of 0.",
+            "params": [
+              {
+                "name": "count",
+                "type_name": "int",
+                "description": "2D coordinate of the cell being checked for orphan status.",
+                "complex_type": false
+              },
+              {
+                "name": "row",
+                "type_name": "int",
+                "description": "1D coordinate of a cell within the grid being analyzed for orphan status.",
+                "complex_type": false
+              },
+              {
+                "name": "column",
+                "type_name": "int",
+                "description": "2D position of the cell in the grid, which is used to determine the neighbors of the current cell and check if it is an orphan.",
+                "complex_type": false
+              }
+            ],
+            "returns": {
+              "type_name": "boolean",
+              "description": "a boolean value indicating whether an orphan cell exists in the given grid.",
+              "complex_type": false
+            },
+            "name": "orphanDetected",
+            "location": {
+              "start": 171,
+              "insert": 155,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 154,
+                "end": 170
+              }
+            },
+            "item_type": "method",
+            "length": 11,
+            "docLength": 16
+          },
+          {
+            "id": "d329075e-49b6-7eab-6d45-96393e339d38",
+            "ancestors": [
+              "3eed575e-8417-1e9a-8642-1c6f74b3b160"
+            ],
+            "description": "Prints a matrix represented as an array of integers, where each integer represents a cell value in a grid. It iterates through each row and then each cell within that row, printing the value of each cell separated by a space.",
+            "params": [],
+            "name": "printResult",
+            "location": {
+              "start": 187,
+              "insert": 183,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 182,
+                "end": 186
+              }
+            },
+            "item_type": "method",
+            "length": 11,
+            "docLength": 4
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "test.java",
+    "path": "test.java",
+    "content": {
+      "structured": {
+        "description": "An IIR (Infinite Impulse Response) filter, which is a type of recurrent neural network. The code takes in an integer `order` and creates internal arrays for coefficients `coeffsA` and `coeffsB`, as well as history vectors `historyX` and `historyY`. The `setCoeffs()` method sets the coefficients for the neural network, and the `process()` method applies a weighted sum of past values and updates the history vectors using feedback.",
+        "diagram": {
+          "path": "test.java",
+          "gviz": "",
+          "d2": "<?xml version=\"1.0\" encoding=\"utf-8\"?><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" d2Version=\"v0.6.5\" preserveAspectRatio=\"xMinYMin meet\" viewBox=\"0 0 405 368\"><svg id=\"d2-svg\" class=\"d2-1111860978\" width=\"405\" height=\"368\" viewBox=\"11 11 405 368\"><rect x=\"11.000000\" y=\"11.000000\" width=\"405.000000\" height=\"368.000000\" rx=\"0.000000\" fill=\"#151719\" stroke-width=\"0\" /><style type=\"text/css\"><![CDATA[\n.d2-1111860978 .text {\n\tfont-family: \"d2-1111860978-font-regular\";\n}\n@font-face {\n\tfont-family: d2-1111860978-font-regular;\n\tsrc: url(\"data:application/font-woff;base64,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\");\n}\n.d2-1111860978 .text-bold {\n\tfont-family: \"d2-1111860978-font-bold\";\n}\n@font-face {\n\tfont-family: d2-1111860978-font-bold;\n\tsrc: url(\"data:application/font-woff;base64,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\");\n}]]></style><style type=\"text/css\"><![CDATA[.shape {\n  shape-rendering: geometricPrecision;\n  stroke-linejoin: round;\n}\n.connection {\n  stroke-linecap: round;\n  stroke-linejoin: round;\n}\n.blend {\n  mix-blend-mode: multiply;\n  opacity: 0.5;\n}\n\n\t\t.d2-1111860978 .fill-N1{fill:#ECEDED;}\n\t\t.d2-1111860978 .fill-N2{fill:#676C7E;}\n\t\t.d2-1111860978 .fill-N3{fill:#9499AB;}\n\t\t.d2-1111860978 .fill-N4{fill:#CFD2DD;}\n\t\t.d2-1111860978 .fill-N5{fill:#DEE1EB;}\n\t\t.d2-1111860978 .fill-N6{fill:#EEF1F8;}\n\t\t.d2-1111860978 .fill-N7{fill:#151719;}\n\t\t.d2-1111860978 .fill-B1{fill:#717D86;}\n\t\t.d2-1111860978 .fill-B2{fill:#717D86;}\n\t\t.d2-1111860978 .fill-B3{fill:#ffff00;}\n\t\t.d2-1111860978 .fill-B4{fill:#151719;}\n\t\t.d2-1111860978 .fill-B5{fill:#151719;}\n\t\t.d2-1111860978 .fill-B6{fill:#151719;}\n\t\t.d2-1111860978 .fill-AA2{fill:#ECEDED;}\n\t\t.d2-1111860978 .fill-AA4{fill:#CFD2DD;}\n\t\t.d2-1111860978 .fill-AA5{fill:#DEE1EB;}\n\t\t.d2-1111860978 .fill-AB4{fill:#CFD2DD;}\n\t\t.d2-1111860978 .fill-AB5{fill:#DEE1EB;}\n\t\t.d2-1111860978 .stroke-N1{stroke:#ECEDED;}\n\t\t.d2-1111860978 .stroke-N2{stroke:#676C7E;}\n\t\t.d2-1111860978 .stroke-N3{stroke:#9499AB;}\n\t\t.d2-1111860978 .stroke-N4{stroke:#CFD2DD;}\n\t\t.d2-1111860978 .stroke-N5{stroke:#DEE1EB;}\n\t\t.d2-1111860978 .stroke-N6{stroke:#EEF1F8;}\n\t\t.d2-1111860978 .stroke-N7{stroke:#151719;}\n\t\t.d2-1111860978 .stroke-B1{stroke:#717D86;}\n\t\t.d2-1111860978 .stroke-B2{stroke:#717D86;}\n\t\t.d2-1111860978 .stroke-B3{stroke:#ffff00;}\n\t\t.d2-1111860978 .stroke-B4{stroke:#151719;}\n\t\t.d2-1111860978 .stroke-B5{stroke:#151719;}\n\t\t.d2-1111860978 .stroke-B6{stroke:#151719;}\n\t\t.d2-1111860978 .stroke-AA2{stroke:#ECEDED;}\n\t\t.d2-1111860978 .stroke-AA4{stroke:#CFD2DD;}\n\t\t.d2-1111860978 .stroke-AA5{stroke:#DEE1EB;}\n\t\t.d2-1111860978 .stroke-AB4{stroke:#CFD2DD;}\n\t\t.d2-1111860978 .stroke-AB5{stroke:#DEE1EB;}\n\t\t.d2-1111860978 .background-color-N1{background-color:#ECEDED;}\n\t\t.d2-1111860978 .background-color-N2{background-color:#676C7E;}\n\t\t.d2-1111860978 .background-color-N3{background-color:#9499AB;}\n\t\t.d2-1111860978 .background-color-N4{background-color:#CFD2DD;}\n\t\t.d2-1111860978 .background-color-N5{background-color:#DEE1EB;}\n\t\t.d2-1111860978 .background-color-N6{background-color:#EEF1F8;}\n\t\t.d2-1111860978 .background-color-N7{background-color:#151719;}\n\t\t.d2-1111860978 .background-color-B1{background-color:#717D86;}\n\t\t.d2-1111860978 .background-color-B2{background-color:#717D86;}\n\t\t.d2-1111860978 .background-color-B3{background-color:#ffff00;}\n\t\t.d2-1111860978 .background-color-B4{background-color:#151719;}\n\t\t.d2-1111860978 .background-color-B5{background-color:#151719;}\n\t\t.d2-1111860978 .background-color-B6{background-color:#151719;}\n\t\t.d2-1111860978 .background-color-AA2{background-color:#ECEDED;}\n\t\t.d2-1111860978 .background-color-AA4{background-color:#CFD2DD;}\n\t\t.d2-1111860978 .background-color-AA5{background-color:#DEE1EB;}\n\t\t.d2-1111860978 .background-color-AB4{background-color:#CFD2DD;}\n\t\t.d2-1111860978 .background-color-AB5{background-color:#DEE1EB;}\n\t\t.d2-1111860978 .color-N1{color:#ECEDED;}\n\t\t.d2-1111860978 .color-N2{color:#676C7E;}\n\t\t.d2-1111860978 .color-N3{color:#9499AB;}\n\t\t.d2-1111860978 .color-N4{color:#CFD2DD;}\n\t\t.d2-1111860978 .color-N5{color:#DEE1EB;}\n\t\t.d2-1111860978 .color-N6{color:#EEF1F8;}\n\t\t.d2-1111860978 .color-N7{color:#151719;}\n\t\t.d2-1111860978 .color-B1{color:#717D86;}\n\t\t.d2-1111860978 .color-B2{color:#717D86;}\n\t\t.d2-1111860978 .color-B3{color:#ffff00;}\n\t\t.d2-1111860978 .color-B4{color:#151719;}\n\t\t.d2-1111860978 .color-B5{color:#151719;}\n\t\t.d2-1111860978 .color-B6{color:#151719;}\n\t\t.d2-1111860978 .color-AA2{color:#ECEDED;}\n\t\t.d2-1111860978 .color-AA4{color:#CFD2DD;}\n\t\t.d2-1111860978 .color-AA5{color:#DEE1EB;}\n\t\t.d2-1111860978 .color-AB4{color:#CFD2DD;}\n\t\t.d2-1111860978 .color-AB5{color:#DEE1EB;}.appendix text.text{fill:#ECEDED}.md{--color-fg-default:#ECEDED;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#151719;--color-canvas-subtle:#EEF1F8;--color-border-default:#717D86;--color-border-muted:#717D86;--color-neutral-muted:#EEF1F8;--color-accent-fg:#717D86;--color-accent-emphasis:#717D86;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.sketch-overlay-B1{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-B2{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-B3{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-B4{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-B5{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-B6{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-AA2{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AA4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-AA5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AB4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-AB5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N1{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N2{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-N3{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-N4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-N5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N6{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N7{fill:url(#streaks-darker);mix-blend-mode:lighten}.light-code{display: block}.dark-code{display: none}]]></style><g id=\"com\"><g class=\"shape\" ><rect x=\"12.000000\" y=\"12.000000\" width=\"403.000000\" height=\"366.000000\" class=\" stroke-B1 fill-B4\" style=\"stroke-width:2;\" /></g><text x=\"213.500000\" y=\"45.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:28px\">com</text></g><g id=\"com.thealgorithms\"><g class=\"shape\" ><rect x=\"62.000000\" y=\"62.000000\" width=\"303.000000\" height=\"266.000000\" class=\" stroke-B1 fill-B5\" style=\"stroke-width:2;\" /></g><text x=\"213.500000\" y=\"91.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:24px\">thealgorithms</text></g><g id=\"com.thealgorithms.audiofilters\"><g class=\"shape\" ><rect x=\"112.000000\" y=\"112.000000\" width=\"203.000000\" height=\"166.000000\" class=\" stroke-B1 fill-B6\" style=\"stroke-width:2;\" /></g><text x=\"213.500000\" y=\"137.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:20px\">audiofilters</text></g><g id=\"com.thealgorithms.audiofilters.IIRFilter\"><g class=\"shape\" ><rect x=\"162.000000\" y=\"162.000000\" width=\"103.000000\" height=\"66.000000\" fill=\"#26de81\" class=\" stroke-B1\" style=\"stroke-width:0;\" /></g><text x=\"213.500000\" y=\"200.500000\" fill=\"#151719\" class=\"text-bold\" style=\"text-anchor:middle;font-size:16px\">IIRFilter</text></g><mask id=\"d2-1111860978\" maskUnits=\"userSpaceOnUse\" x=\"11\" y=\"11\" width=\"405\" height=\"368\">\n<rect x=\"11\" y=\"11\" width=\"405\" height=\"368\" fill=\"white\"></rect>\n<rect x=\"189.000000\" y=\"17.000000\" width=\"49\" height=\"36\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"142.500000\" y=\"67.000000\" width=\"142\" height=\"31\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"166.000000\" y=\"117.000000\" width=\"95\" height=\"26\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"184.500000\" y=\"184.500000\" width=\"58\" height=\"21\" fill=\"rgba(0,0,0,0.75)\"></rect>\n</mask></svg></svg>\n",
+          "d2_src": "direction: down\n\nvars: {\n  d2-config: {\n    pad: 0\n    theme-overrides: {\n      B1: \"#717D86\"\n      B2: \"#717D86\"\n      B3: \"#ffff00\"\n      B4: \"#151719\"\n      B5: \"#151719\"\n      B6: \"#151719\"\n      N1: \"#ECEDED\"\n      N7: \"#151719\"\n      AA2: \"#ECEDED\"\n    }\n  }\n}\n\nstyle: {\n  fill: \"#151719\"\n}\ncom.thealgorithms.audiofilters.IIRFilter: {\n  style: {\n    fill: \"#26de81\"\n    font-color: \"#151719\"\n    stroke-width: 0\n  }\n}\n"
+        },
+        "items": [
+          {
+            "id": "f7b3d17f-cace-f3b7-e341-3fc9b4e9c1d9",
+            "ancestors": [],
+            "description": "Is used to implement an Internal Model (IIR) filter, which is a type of recurrent neural network (RNN). The class takes in the order of the filter, as well as coefficients for the two polynomial terms that make up the filter. The `process` method takes in a sample value and applies the weighted sum of past values based on the coefficient values, updating the history vectors using feedback mechanism.",
+            "name": "IIRFilter",
+            "location": {
+              "start": 9,
+              "insert": 3,
+              "offset": " ",
+              "indent": 0,
+              "comment": {
+                "start": 2,
+                "end": 8
+              }
+            },
+            "item_type": "class",
+            "length": 84,
+            "docLength": 6
+          },
+          {
+            "id": "3a7166d0-ea7a-418f-a14f-ab2ea46b7666",
+            "ancestors": [
+              "f7b3d17f-cace-f3b7-e341-3fc9b4e9c1d9"
+            ],
+            "description": "Sets the coefficients of a and b based on user input. It checks that the length of `aCoeffs` is equal to `order`, and that `aCoeffs[0]` is not zero. Finally, it assigns the values of `aCoeffs` and `bCoeffs` to the `coeffsA` and `coeffsB` arrays respectively.",
+            "params": [
+              {
+                "name": "aCoeffs",
+                "type_name": "double[]",
+                "description": "1D array of coefficients for the linear combination of polynomial terms in the `setCoeffs()` method.\n\n* Length: `aCoeffs.length` must equal `order`, which is a constant integer specified in the function definition.\n* Non-zero value: The first element of `aCoeffs`, `aCoeffs.get(0)`, must not be zero.",
+                "complex_type": true
+              },
+              {
+                "name": "bCoeffs",
+                "type_name": "double[]",
+                "description": "2nd array of coefficients that are used to compute the output of the `setCoeffs` function.\n\n* `bCoeffs` has length `order`, which is the same as the output coeffs generated by the function.\n* The elements of `bCoeffs` are taken from a set of values, possibly including zero and non-zero numbers.",
+                "complex_type": true
+              }
+            ],
+            "usage": {
+              "language": "java",
+              "code": "public static void main(String[] args) throws IllegalArgumentException {\n        IIRFilter filter = new IIRFilter(5);\n        double[] aCoeffs = new double[]{1, 2, 3};\n        double[] bCoeffs = new double[]{4, 5, 6};\n        filter.setCoeffs(aCoeffs, bCoeffs);\n    }\n",
+              "description": "\nIn this example, the user creates an instance of the IIRFilter class with a specified order (5). Then they create two arrays of coefficients 'aCoeffs' and 'bCoeffs' that are used to set the coefficients for the neural network. The method setCoeffs is then called on the filter instance, passing in the two coefficient arrays. If the input arrays do not meet the requirements specified by the method (i.e., have the correct length and do not contain zero values in the first position), an IllegalArgumentException will be thrown. Otherwise, the coefficients are assigned to internal arrays and the method returns without any further action."
+            },
+            "name": "setCoeffs",
+            "location": {
+              "start": 44,
+              "insert": 35,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 34,
+                "end": 43
+              }
+            },
+            "item_type": "method",
+            "length": 18,
+            "docLength": 9
+          },
+          {
+            "id": "24067931-1bb6-92ae-a148-e61775f26895",
+            "ancestors": [
+              "f7b3d17f-cace-f3b7-e341-3fc9b4e9c1d9"
+            ],
+            "description": "Takes a sample value, processes it through a set of coefficients, and returns the processed value with feedback applied to previous values.",
+            "params": [
+              {
+                "name": "sample",
+                "type_name": "double",
+                "description": "initial value of the feedback loop, which is used to calculate the output result in the `process()` function.",
+                "complex_type": false
+              }
+            ],
+            "returns": {
+              "type_name": "double",
+              "description": "a double value representing the result of feeding a given input sample through a recurrent neural network.",
+              "complex_type": false
+            },
+            "usage": {
+              "language": "java",
+              "code": "public class Main {\n    public static void main(String[] args) throws Exception {\n        // Instantiate a new IIRFilter with order 3\n        IIRFilter filter = new IIRFilter(3);\n\n        // Initialize the coefficients for the filter using setCoeffs() method.\n        double[] aCoeffs = new double[] {1, 0, 0};\n        double[] bCoeffs = new double[] {1, 1, 1};\n        filter.setCoeffs(aCoeffs, bCoeffs);\n\n        // Process a sample value using the process() method\n        double result = filter.process(3.0);\n        System.out.println(\"Result: \" + result);\n    }\n}\n",
+              "description": "\nThis code first instantiates a new IIRFilter object with an order of 3, then initializes the coefficients for the filter using the setCoeffs() method. Next, it processes a sample value of 3.0 using the process() method and prints out the result."
+            },
+            "name": "process",
+            "location": {
+              "start": 72,
+              "insert": 63,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 62,
+                "end": 71
+              }
+            },
+            "item_type": "method",
+            "length": 20,
+            "docLength": 9
           }
         ]
       }
