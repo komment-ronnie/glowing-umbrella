@@ -1,0 +1,84 @@
+[
+  {
+    "name": "source.java",
+    "path": "source.java",
+    "content": {
+      "structured": {
+        "description": "A simple cellular automata problem, where each cell in a 2D grid can take on one of two values, and the next state of each cell is determined by a set of rules based on its current state and the states of its neighbors. The code includes methods for iterating through the grid, counting the number of cells with a given value at a given row and column, determining whether a cell is an orphan (i.e., has zero neighbors), and printing the resulting grid.",
+        "items": [
+          {
+            "id": "61b389c8-5cd7-2dba-1842-944faeaa16e6",
+            "ancestors": [],
+            "description": "Is used to solve Sudoku puzzles by recursively traversing a grid and filling in cells based on their row, column, and count. The class uses a set of moves to determine the possible positions for a knight on a chessboard-style grid, and it checks if each cell can be filled with a number from 1 to the total number of cells without breaking any constraints. If a solution is found, it prints the result, otherwise, it returns false.",
+            "name": "KnightsTour",
+            "location": {
+              "start": 4,
+              "insert": 4,
+              "offset": " ",
+              "indent": 0,
+              "comment": null
+            },
+            "item_type": "class",
+            "length": 186,
+            "docLength": null
+          },
+          {
+            "id": "3974fd3a-202e-c6a8-3e4a-49f69050ebb1",
+            "ancestors": [
+              "61b389c8-5cd7-2dba-1842-944faeaa16e6"
+            ],
+            "description": "Calculates the number of elements in a collection by iterating over the nodes of a linked list and counting the number of non-null items. If the count exceeds Integer.MAX_VALUE, the function breaks out of the loop.",
+            "params": [],
+            "returns": {
+              "type_name": "int",
+              "description": "the number of elements in the collection.",
+              "complex_type": false
+            },
+            "usage": {
+              "language": "java",
+              "code": "public int size() {\n        restartFromHead: for (;;) {\n            int count = 0;\n            for (Node<E> p = first(); p != null;) {\n                if (p.item != null)\n                    if (++count == Integer.MAX_VALUE)\n                        break;  // @see Collection.size()\n                if (p == (p = p.next))\n                    continue restartFromHead;\n            }\n            return count;\n        }\n    }\n",
+              "description": "\nIn this example, the method size is a method that is used in a collection to compute the number of elements it contains. The code is written as a loop that will iterate over all the nodes in the linked list until an Integer.MAX_VALUE is reached. Each time a node is traversed the count variable will be incremented by 1 and if the value of the count reaches its maximum, then the method will break.\n\nThe example provided above would compute the number of elements in the linked list correctly but there are some errors with the code as follows:\n* The condition of the for loop should be written as (p != null) to avoid infinite looping\n* The if statement inside the for loop is incorrect and should be corrected as if (p.item != null)\n* The break statement should be placed outside the loop instead of inside the loop\n\nThe corrected code would look like this:\n"
+            },
+            "name": "size",
+            "location": {
+              "start": 5,
+              "insert": 5,
+              "offset": " ",
+              "indent": 4,
+              "comment": null
+            },
+            "item_type": "method",
+            "length": 13,
+            "docLength": null
+          },
+          {
+            "id": "7912c84c-ca50-21bf-c246-20e4fa8a8bb3",
+            "ancestors": [
+              "61b389c8-5cd7-2dba-1842-944faeaa16e6"
+            ],
+            "description": "Creates a two-dimensional integer array called `grid`, initializes it with random values, and then uses a recursive function `solve()` to check if there is a path from a starting point (row, col) to the center of the grid. If a path exists, the function prints the result, otherwise it simply outputs \"no result\".",
+            "params": [
+              {
+                "name": "args",
+                "type_name": "String[]",
+                "description": "0 or more command-line arguments passed to the program when it is run, which are ignored in this case and have no effect on the function's behavior.\n\n* Length: `args.length` is equal to 0 or 1, depending on whether the program was run with an argument or not.\n* Elements: If there is only one element in `args`, it is a string representing the command-line argument passed to the program. Otherwise, `args` is an array of strings with no particular ordering or format.",
+                "complex_type": true
+              }
+            ],
+            "name": "main",
+            "location": {
+              "start": 33,
+              "insert": 33,
+              "offset": " ",
+              "indent": 4,
+              "comment": null
+            },
+            "item_type": "method",
+            "length": 23,
+            "docLength": null
+          }
+        ]
+      }
+    }
+  }
+]
