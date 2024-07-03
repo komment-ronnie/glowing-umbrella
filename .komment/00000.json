@@ -1,0 +1,58 @@
+[
+  {
+    "name": "source.java",
+    "path": "source.java",
+    "content": {
+      "structured": {
+        "description": "a 2D grid where live cells can move in certain ways, and it checks for a solution to the game of life by iterating through each cell in the grid and applying the rules of the game. The code uses Java's built-in `Arrays` class for working with multi-dimensional arrays, and it defines several methods to help with the logic of the game: `countNeighbors` counts the number of cells at a given row and column that are surrounded by cells of a specific value, `orphanDetected` determines if an orphaned cell exists at a specified row and column based on the count of neighbors, and `printResult` prints each element of the grid skipping any with value `-1`. The code also defines several arrays `moves` that contain all possible move combinations, and it uses these moves to generate a list of adjacent cells to a given cell in the grid.",
+        "items": [
+          {
+            "id": "86ecb4da-83ad-e19f-8949-57bf7e161deb",
+            "ancestors": [],
+            "description": "Is a utility class for solving Sudoku puzzles using the Knight's Tour algorithm. It provides a high-level description of its functionality, including counting the number of unexplored cells in a given row and column of the grid, determining whether an orphaned cell exists at the specified row and column, and looping through a 2D array `grid` and printing each element, skipping any with value `-1`.",
+            "name": "KnightsTour",
+            "location": {
+              "start": 3,
+              "insert": 3,
+              "offset": " ",
+              "indent": 0,
+              "comment": null
+            },
+            "item_type": "class",
+            "length": 194,
+            "docLength": null
+          },
+          {
+            "id": "a363ab7a-5fcc-6caf-6f40-a7ce40c9070f",
+            "ancestors": [
+              "86ecb4da-83ad-e19f-8949-57bf7e161deb"
+            ],
+            "description": "Calculates the number of nodes in a circular linked list by iterating over the nodes and counting the number of non-null items.",
+            "params": [],
+            "returns": {
+              "type_name": "int",
+              "description": "the number of nodes in the linked list.",
+              "complex_type": false
+            },
+            "usage": {
+              "language": "java",
+              "code": "public static void main(String[] args) {\n    CircularList<String> list = new CircularList<>();\n    \n    list.add(\"First\");\n    list.add(\"Second\");\n    list.add(\"Third\");\n    \n    System.out.println(list.size()); // Output: 3\n}\n",
+              "description": ""
+            },
+            "name": "size",
+            "location": {
+              "start": 4,
+              "insert": 4,
+              "offset": " ",
+              "indent": 4,
+              "comment": null
+            },
+            "item_type": "method",
+            "length": 13,
+            "docLength": null
+          }
+        ]
+      }
+    }
+  }
+]
