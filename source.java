@@ -1,7 +1,22 @@
 package com.thealgorithms.backtracking;
 import java.util.*;
 
+/**
+ * Is used to solve Sudoku puzzles by recursively traversing a grid and filling in
+ * cells based on their row, column, and count. The class uses a set of moves to
+ * determine the possible positions for a knight on a chessboard-style grid, and it
+ * checks if each cell can be filled with a number from 1 to the total number of cells
+ * without breaking any constraints. If a solution is found, it prints the result,
+ * otherwise, it returns false.
+ */
 public class KnightsTour {
+    /**
+     * Calculates the number of elements in a collection by iterating over the nodes of
+     * a linked list and counting the number of non-null items. If the count exceeds
+     * Integer.MAX_VALUE, the function breaks out of the loop.
+     * 
+     * @returns the number of elements in the collection.
+     */
     public int size() {
         restartFromHead: for (;;) {
             int count = 0;
@@ -30,6 +45,21 @@ public class KnightsTour {
     
     private static int[][] grid; // chess grid
     private static int total; // total squares in chess
+    /**
+     * Creates a two-dimensional integer array called `grid`, initializes it with random
+     * values, and then uses a recursive function `solve()` to check if there is a path
+     * from a starting point (row, col) to the center of the grid. If a path exists, the
+     * function prints the result, otherwise it simply outputs "no result".
+     * 
+     * @param args 0 or more command-line arguments passed to the program when it is run,
+     * which are ignored in this case and have no effect on the function's behavior.
+     * 
+     * * Length: `args.length` is equal to 0 or 1, depending on whether the program was
+     * run with an argument or not.
+     * * Elements: If there is only one element in `args`, it is a string representing
+     * the command-line argument passed to the program. Otherwise, `args` is an array of
+     * strings with no particular ordering or format.
+     */
     public static void main(String[] args) {
         grid = new int[base][base];
         total = (base - 4) * (base - 4);
