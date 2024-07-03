@@ -1,6 +1,5 @@
 package com.thealgorithms.backtracking;
 import java.util.*;
-
 public class KnightsTour {
     public int size() {
         restartFromHead: for (;;) {
@@ -15,7 +14,6 @@ public class KnightsTour {
             return count;
         }
     }
-    
     private static final int base = 12;
     private static final int[][] moves = {
         {1, -2},
