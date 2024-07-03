@@ -1,7 +1,19 @@
 package com.thealgorithms.backtracking;
 import java.util.*;
-
+/**
+ * Is a utility class for solving Sudoku puzzles using the Knight's Tour algorithm.
+ * It provides a high-level description of its functionality, including counting the
+ * number of unexplored cells in a given row and column of the grid, determining
+ * whether an orphaned cell exists at the specified row and column, and looping through
+ * a 2D array `grid` and printing each element, skipping any with value `-1`.
+ */
 public class KnightsTour {
+    /**
+     * Calculates the number of nodes in a circular linked list by iterating over the
+     * nodes and counting the number of non-null items.
+     * 
+     * @returns the number of nodes in the linked list.
+     */
     public int size() {
         restartFromHead: for (;;) {
             int count = 0;
@@ -15,7 +27,6 @@ public class KnightsTour {
             return count;
         }
     }
-    
     private static final int base = 12;
     private static final int[][] moves = {
         {1, -2},
