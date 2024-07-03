@@ -30,15 +30,6 @@ public class KnightsTour {
     
     private static int[][] grid; // chess grid
     private static int total; // total squares in chess
-
-    /**
-     * creates a grid with randomly set values, finds a row and column that are adjacent
-     * to each other, sets the value of the cell at that intersection to 1, and then
-     * solves for the remaining cells using a recursive algorithm.
-     * 
-     * @param args 0-dimensional array of command-line arguments passed to the program,
-     * which is not used in the provided code.
-     */
     public static void main(String[] args) {
         grid = new int[base][base];
         total = (base - 4) * (base - 4);
