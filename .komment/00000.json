@@ -1,0 +1,58 @@
+[
+  {
+    "name": "source.java",
+    "path": "source.java",
+    "content": {
+      "structured": {
+        "description": "A two-dimensional grid and uses a breadth-first search algorithm to find a path from the top left corner to the bottom right corner while avoiding certain cells. The code also keeps track of the number of cells that have been visited (the \"total\" value) and uses this information to determine when it has found a valid path. The code includes several methods for working with the grid, such as `neighbors`, `countNeighbors`, `orphanDetected`, and `printResult`. Overall, the code is using a breadth-first search algorithm to find a path in a two-dimensional grid while avoiding certain cells.",
+        "items": [
+          {
+            "id": "7a6ca135-e0c8-a18a-494b-8ef836ddefdc",
+            "ancestors": [],
+            "description": "Is an implementation of the knight's tour problem, which involves finding a path that visits every square of a chessboard once and returns to its starting position. The class provides methods for counting neighbors of a cell in a two-dimensional grid and detecting orphans, as well as a method for printing each element of the 2D array `grid`. The class also uses a list of adjacent cells to a given cell in the grid to determine whether an orphaned cell exists at a specified row and column.",
+            "name": "KnightsTour",
+            "location": {
+              "start": 4,
+              "insert": 4,
+              "offset": " ",
+              "indent": 0,
+              "comment": null
+            },
+            "item_type": "class",
+            "length": 195,
+            "docLength": null
+          },
+          {
+            "id": "b8bf1c38-5aec-da8c-7c49-7a67e979685d",
+            "ancestors": [
+              "7a6ca135-e0c8-a18a-494b-8ef836ddefdc"
+            ],
+            "description": "Calculates the number of nodes in a circularly linked list, restarting from the head upon reaching the maximum value of `Integer.MAX_VALUE`.",
+            "params": [],
+            "returns": {
+              "type_name": "int",
+              "description": "the number of nodes in the collection.",
+              "complex_type": false
+            },
+            "usage": {
+              "language": "java",
+              "code": "LinkedList<String> list = new LinkedList<>();\nlist.add(\"Hello\");\nlist.add(\"World!\");\nSystem.out.println(list.size()); // Prints 2\n",
+              "description": "\nThis example shows that the size of the linked list is initially 0, but after adding two elements to it, its size becomes 2."
+            },
+            "name": "size",
+            "location": {
+              "start": 5,
+              "insert": 5,
+              "offset": " ",
+              "indent": 4,
+              "comment": null
+            },
+            "item_type": "method",
+            "length": 13,
+            "docLength": null
+          }
+        ]
+      }
+    }
+  }
+]

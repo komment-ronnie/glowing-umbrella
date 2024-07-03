@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "version": "1",
+    "updated_at": "2024-07-03T08:04:37.321Z",
+    "created_at": "2024-07-03T08:04:37.763Z",
+    "pipelines": [
+      "ce05d914-a51b-45b7-9a0e-9cc423e1a2b1"
+    ]
+  },
+  "lookup": [
+    [
+      "source.java"
+    ]
+  ]
+}

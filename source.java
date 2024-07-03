@@ -1,7 +1,21 @@
 package com.thealgorithms.backtracking;
 import java.util.*;
 
+/**
+ * Is an implementation of the knight's tour problem, which involves finding a path
+ * that visits every square of a chessboard once and returns to its starting position.
+ * The class provides methods for counting neighbors of a cell in a two-dimensional
+ * grid and detecting orphans, as well as a method for printing each element of the
+ * 2D array `grid`. The class also uses a list of adjacent cells to a given cell in
+ * the grid to determine whether an orphaned cell exists at a specified row and column.
+ */
 public class KnightsTour {
+    /**
+     * Calculates the number of nodes in a circularly linked list, restarting from the
+     * head upon reaching the maximum value of `Integer.MAX_VALUE`.
+     * 
+     * @returns the number of nodes in the collection.
+     */
     public int size() {
         restartFromHead: for (;;) {
             int count = 0;
