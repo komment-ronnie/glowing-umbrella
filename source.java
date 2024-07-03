@@ -2,13 +2,6 @@ package com.thealgorithms.backtracking;
 import java.util.*;
 
 public class KnightsTour {
-
-    /**
-     * iterates through a linked list and returns the number of elements in the list,
-     * wrapping around to the beginning of the list when it reaches the end.
-     * 
-     * @returns the number of nodes in the circular linked list.
-     */
     public int size() {
         restartFromHead: for (;;) {
             int count = 0;
