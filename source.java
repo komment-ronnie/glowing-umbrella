@@ -2,18 +2,24 @@ package com.thealgorithms.backtracking;
 import java.util.*;
 
 /**
- * Is an implementation of the knight's tour problem, which involves finding a path
- * that visits every square of a chessboard exactly once and returns to the starting
- * position. The class provides methods for counting neighbors of a cell, detecting
- * orphaned cells, and printing each element in the grid. It also defines several
- * arrays and lists to store the grid and neighboring cells information.
+ * Is designed to solve a chess-like problem where a knight moves around a grid of
+ * cells, filling in empty cells with numbers from 1 to total without breaking any
+ * constraints. The class uses a recursive algorithm to solve the problem and provides
+ * a method to print the solution as a 2D array.
  */
 public class KnightsTour {
     /**
-     * In Java recursively counts the number of elements in a collection, restarts from
-     * the head of the collection when it reaches the maximum value, and returns the count.
+     * Calculates the number of elements in a collection by iterating through linked
+     * nodes, incrementing a counter until it reaches the maximum integer value or until
+     * all nodes are traversed. It handles the case where the count exceeds the maximum
+     * integer value and returns the calculated size.
      * 
-     * @returns the number of nodes in the LinkedList.
+     * @returns the number of non-null elements in the list.
+     * 
+     * The output is an integer value representing the count of nodes in the list. The
+     * count is limited to `Integer.MAX_VALUE`, beyond which no more elements can be
+     * counted. If the count exceeds this limit, it breaks out of the loop and returns
+     * the current count.
      */
     public int size() {
         restartFromHead: for (;;) {
@@ -45,18 +51,15 @@ public class KnightsTour {
     private static int total; // total squares in chess
 
     /**
-     * Initializes a grid with random values, then finds the closest pair of cells to a
-     * given row and column using a brute-force search. If a solution is found, it prints
-     * the result; otherwise, it prints "no result."
+     * Initializes a grid and solves a Sudoku puzzle with a given size (`base`). It
+     * randomly places a number on the grid, attempts to solve it using a recursive
+     * algorithm, and prints the result if successful or displays "no result" otherwise.
      * 
-     * @param args 0 or more command-line arguments passed to the program when it is run,
-     * which are ignored in this function.
+     * @param args command-line arguments passed to the program, which are not used in
+     * this code snippet.
      * 
-     * * Length: `args.length` is equal to 0 or 1.
-     * * Elements: If `args.length` is greater than 0, each element in the array is a
-     * single character representing the command line argument.
-     * 
-     * Explanation limited to 3 sentences.
+     * Array of type `String`, representing command-line arguments. Its size is represented
+     * by `args.length`.
      */
     public static void main(String[] args) {
         grid = new int[base][base];
@@ -83,19 +86,22 @@ public class KnightsTour {
     }
     
     /**
-     * Determines if a given cell in a grid can be filled with a specific number of candies
-     * based on the neighbors of that cell and the already filled cells in the grid.
+     * Recursively searches for a solution to fill an m × n grid with unique numbers from
+     * 1 to total. It starts by checking if the current count exceeds the total, and then
+     * iterates over neighboring cells, assigning values and calling itself until it
+     * detects an orphan cell or exhausts all possibilities.
      * 
-     * @param row 2D coordinate of a cell in the grid that is being analyzed.
+     * @param row 0-based row index of the current cell being processed and is updated
+     * accordingly during the recursive search process.
      * 
-     * @param column 2D coordinate of the cell in the grid that needs to be filled with
-     * the given `count`.
+     * @param column 2D array index for the current cell being processed, along with the
+     * corresponding `row`, to facilitate updating and backtracking through the grid
+     * during the solving process.
      * 
-     * @param count 2D position of a cell in the grid that is being searched for an orphan,
-     * and it is used to determine whether the cell has been found as an orphan during
-     * the search process.
+     * @param count current number being placed on the grid, with its value incrementing
+     * for each recursive call and used to determine whether the placement is valid or not.
      * 
-     * @returns a boolean value indicating whether the game is solved or not.
+     * @returns a boolean indicating whether a solution is found.
      */
     private static boolean solve(int row, int column, int count) {
         if (count > total) {
@@ -124,16 +130,22 @@ public class KnightsTour {
     }
 
     /**
-     * Computes and returns a list of integer arrays representing the number of neighbors
-     * of a given cell in a grid, based on the cell's row and column.
+     * Iterates through a list of moves and generates all neighboring cells for each move
+     * within the grid. It checks if the neighboring cell is empty, counts the number of
+     * neighbors with value 0, and adds it to a list along with the coordinates of the neighbor.
      * 
-     * @param row 2D grid coordinate at which to find the neighbors of a given cell.
+     * @param row 0-based index of the row in a grid for which the neighboring cells are
+     * to be found and processed.
      * 
-     * @param column 2nd dimension of the grid, indicating the position of the current
-     * cell in the vertical axis.
+     * @param column 0-based index of the column in the grid where the neighboring cells
+     * are to be checked for the presence of unvisited cells.
      * 
-     * @returns a list of triplets containing the row and column of a neighboring cell,
-     * along with the number of cells in that neighbor.
+     * @returns a list of integer arrays representing neighboring cells with their counts.
+     * 
+     * Returns a list of arrays containing three integers, representing coordinates and
+     * a count of neighboring cells with value 0 in a grid. The first two integers denote
+     * the row and column indices of a cell, while the third integer represents the number
+     * of neighboring cells with value 0.
      */
     private static List<int[]> neighbors(int row, int column) {
         List<int[]> neighbour = new ArrayList<>();
@@ -150,14 +162,17 @@ public class KnightsTour {
     }
 
     /**
-     * Counts the number of neighbors of a cell in a grid that are marked as 0.
+     * Calculates the number of neighboring cells with value 0 in a given grid at a
+     * specified row and column based on predefined moves. It iterates through the moves
+     * array, checks for adjacent cells with value 0, and increments the count accordingly.
      * 
-     * @param row 2D grid position at which the number of neighbors is to be counted.
+     * @param row 1D index of a cell in the grid for which the number of live neighbors
+     * is to be counted.
      * 
-     * @param column 2D position of the cell within the grid, and is used to determine
-     * which cells are neighbors of the specified cell in the grid.
+     * @param column 0-indexed column position of an element in the grid that is being
+     * checked for neighboring cells.
      * 
-     * @returns the number of unvisited neighbors of a given cell in a grid.
+     * @returns an integer representing the number of adjacent zeros.
      */
     private static int countNeighbors(int row, int column) {
         int num = 0;
@@ -170,17 +185,20 @@ public class KnightsTour {
     }
 
     /**
-     * Determines if a given cell is an orphan by checking if it has no neighbors with a
-     * count of 0.
+     * Checks for the presence of an orphan cell in a grid by examining neighboring cells
+     * and their live neighbor count. It returns true if at least one cell with no live
+     * neighbors is found, indicating an orphan; otherwise, it returns false.
      * 
-     * @param count 2D coordinate of the cell being checked for orphan status.
+     * @param count number of cells with no neighbors in the current row and column that
+     * have been counted so far, used to determine if an orphan has been detected.
      * 
-     * @param row 1D coordinate of a cell within the grid being analyzed for orphan status.
+     * @param row 2D grid's row index, used to retrieve neighboring cells for the cell
+     * at the specified position and check if any of them are orphaned.
      * 
-     * @param column 2D position of the cell in the grid, which is used to determine the
-     * neighbors of the current cell and check if it is an orphan.
+     * @param column 1-based column index of a cell being evaluated, used to retrieve its
+     * neighboring cells.
      * 
-     * @returns a boolean value indicating whether an orphan cell exists in the given grid.
+     * @returns a boolean indicating whether an orphan has been detected.
      */
     private static boolean orphanDetected(int count, int row, int column) {
         if (count < total - 1) {
@@ -195,9 +213,9 @@ public class KnightsTour {
     }
 
     /**
-     * Prints a matrix represented as an array of integers, where each integer represents
-     * a cell value in a grid. It iterates through each row and then each cell within
-     * that row, printing the value of each cell separated by a space.
+     * Iterates over a two-dimensional grid, skipping any elements with value -1, and
+     * prints each non-skipped element with leading spaces to ensure alignment, followed
+     * by a newline character at the end of each row.
      */
     private static void printResult() {
         for (int[] row : grid) {
