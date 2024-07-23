@@ -1,0 +1,400 @@
+[
+  {
+    "name": "source.java",
+    "path": "source.java",
+    "content": {
+      "structured": {
+        "description": "A KnightsTour class that solves the classic 8-Queens problem using backtracking algorithm. The 8-Queens problem is a classic puzzle where eight queens must be placed on an 8x8 chessboard so that no queen attacks another. The solve method checks if a given row, column and count can be filled with a number from 1 to total without breaking any constraints. If it can be solved, the function returns true.",
+        "diagram": {
+          "gviz": "",
+          "d2": "<?xml version=\"1.0\" encoding=\"utf-8\"?><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" d2Version=\"v0.6.5\" preserveAspectRatio=\"xMinYMin meet\" viewBox=\"0 0 435 368\"><svg id=\"d2-svg\" class=\"d2-3277132633\" width=\"435\" height=\"368\" viewBox=\"11 11 435 368\"><rect x=\"11.000000\" y=\"11.000000\" width=\"435.000000\" height=\"368.000000\" rx=\"0.000000\" fill=\"#151719\" stroke-width=\"0\" /><style type=\"text/css\"><![CDATA[\n.d2-3277132633 .text {\n\tfont-family: \"d2-3277132633-font-regular\";\n}\n@font-face {\n\tfont-family: d2-3277132633-font-regular;\n\tsrc: url(\"data:application/font-woff;base64,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\");\n}\n.d2-3277132633 .text-bold {\n\tfont-family: \"d2-3277132633-font-bold\";\n}\n@font-face {\n\tfont-family: d2-3277132633-font-bold;\n\tsrc: url(\"data:application/font-woff;base64,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\");\n}]]></style><style type=\"text/css\"><![CDATA[.shape {\n  shape-rendering: geometricPrecision;\n  stroke-linejoin: round;\n}\n.connection {\n  stroke-linecap: round;\n  stroke-linejoin: round;\n}\n.blend {\n  mix-blend-mode: multiply;\n  opacity: 0.5;\n}\n\n\t\t.d2-3277132633 .fill-N1{fill:#ECEDED;}\n\t\t.d2-3277132633 .fill-N2{fill:#676C7E;}\n\t\t.d2-3277132633 .fill-N3{fill:#9499AB;}\n\t\t.d2-3277132633 .fill-N4{fill:#CFD2DD;}\n\t\t.d2-3277132633 .fill-N5{fill:#DEE1EB;}\n\t\t.d2-3277132633 .fill-N6{fill:#EEF1F8;}\n\t\t.d2-3277132633 .fill-N7{fill:#151719;}\n\t\t.d2-3277132633 .fill-B1{fill:#717D86;}\n\t\t.d2-3277132633 .fill-B2{fill:#717D86;}\n\t\t.d2-3277132633 .fill-B3{fill:#ffff00;}\n\t\t.d2-3277132633 .fill-B4{fill:#151719;}\n\t\t.d2-3277132633 .fill-B5{fill:#151719;}\n\t\t.d2-3277132633 .fill-B6{fill:#151719;}\n\t\t.d2-3277132633 .fill-AA2{fill:#ECEDED;}\n\t\t.d2-3277132633 .fill-AA4{fill:#CFD2DD;}\n\t\t.d2-3277132633 .fill-AA5{fill:#DEE1EB;}\n\t\t.d2-3277132633 .fill-AB4{fill:#CFD2DD;}\n\t\t.d2-3277132633 .fill-AB5{fill:#DEE1EB;}\n\t\t.d2-3277132633 .stroke-N1{stroke:#ECEDED;}\n\t\t.d2-3277132633 .stroke-N2{stroke:#676C7E;}\n\t\t.d2-3277132633 .stroke-N3{stroke:#9499AB;}\n\t\t.d2-3277132633 .stroke-N4{stroke:#CFD2DD;}\n\t\t.d2-3277132633 .stroke-N5{stroke:#DEE1EB;}\n\t\t.d2-3277132633 .stroke-N6{stroke:#EEF1F8;}\n\t\t.d2-3277132633 .stroke-N7{stroke:#151719;}\n\t\t.d2-3277132633 .stroke-B1{stroke:#717D86;}\n\t\t.d2-3277132633 .stroke-B2{stroke:#717D86;}\n\t\t.d2-3277132633 .stroke-B3{stroke:#ffff00;}\n\t\t.d2-3277132633 .stroke-B4{stroke:#151719;}\n\t\t.d2-3277132633 .stroke-B5{stroke:#151719;}\n\t\t.d2-3277132633 .stroke-B6{stroke:#151719;}\n\t\t.d2-3277132633 .stroke-AA2{stroke:#ECEDED;}\n\t\t.d2-3277132633 .stroke-AA4{stroke:#CFD2DD;}\n\t\t.d2-3277132633 .stroke-AA5{stroke:#DEE1EB;}\n\t\t.d2-3277132633 .stroke-AB4{stroke:#CFD2DD;}\n\t\t.d2-3277132633 .stroke-AB5{stroke:#DEE1EB;}\n\t\t.d2-3277132633 .background-color-N1{background-color:#ECEDED;}\n\t\t.d2-3277132633 .background-color-N2{background-color:#676C7E;}\n\t\t.d2-3277132633 .background-color-N3{background-color:#9499AB;}\n\t\t.d2-3277132633 .background-color-N4{background-color:#CFD2DD;}\n\t\t.d2-3277132633 .background-color-N5{background-color:#DEE1EB;}\n\t\t.d2-3277132633 .background-color-N6{background-color:#EEF1F8;}\n\t\t.d2-3277132633 .background-color-N7{background-color:#151719;}\n\t\t.d2-3277132633 .background-color-B1{background-color:#717D86;}\n\t\t.d2-3277132633 .background-color-B2{background-color:#717D86;}\n\t\t.d2-3277132633 .background-color-B3{background-color:#ffff00;}\n\t\t.d2-3277132633 .background-color-B4{background-color:#151719;}\n\t\t.d2-3277132633 .background-color-B5{background-color:#151719;}\n\t\t.d2-3277132633 .background-color-B6{background-color:#151719;}\n\t\t.d2-3277132633 .background-color-AA2{background-color:#ECEDED;}\n\t\t.d2-3277132633 .background-color-AA4{background-color:#CFD2DD;}\n\t\t.d2-3277132633 .background-color-AA5{background-color:#DEE1EB;}\n\t\t.d2-3277132633 .background-color-AB4{background-color:#CFD2DD;}\n\t\t.d2-3277132633 .background-color-AB5{background-color:#DEE1EB;}\n\t\t.d2-3277132633 .color-N1{color:#ECEDED;}\n\t\t.d2-3277132633 .color-N2{color:#676C7E;}\n\t\t.d2-3277132633 .color-N3{color:#9499AB;}\n\t\t.d2-3277132633 .color-N4{color:#CFD2DD;}\n\t\t.d2-3277132633 .color-N5{color:#DEE1EB;}\n\t\t.d2-3277132633 .color-N6{color:#EEF1F8;}\n\t\t.d2-3277132633 .color-N7{color:#151719;}\n\t\t.d2-3277132633 .color-B1{color:#717D86;}\n\t\t.d2-3277132633 .color-B2{color:#717D86;}\n\t\t.d2-3277132633 .color-B3{color:#ffff00;}\n\t\t.d2-3277132633 .color-B4{color:#151719;}\n\t\t.d2-3277132633 .color-B5{color:#151719;}\n\t\t.d2-3277132633 .color-B6{color:#151719;}\n\t\t.d2-3277132633 .color-AA2{color:#ECEDED;}\n\t\t.d2-3277132633 .color-AA4{color:#CFD2DD;}\n\t\t.d2-3277132633 .color-AA5{color:#DEE1EB;}\n\t\t.d2-3277132633 .color-AB4{color:#CFD2DD;}\n\t\t.d2-3277132633 .color-AB5{color:#DEE1EB;}.appendix text.text{fill:#ECEDED}.md{--color-fg-default:#ECEDED;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#151719;--color-canvas-subtle:#EEF1F8;--color-border-default:#717D86;--color-border-muted:#717D86;--color-neutral-muted:#EEF1F8;--color-accent-fg:#717D86;--color-accent-emphasis:#717D86;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.sketch-overlay-B1{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-B2{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-B3{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-B4{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-B5{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-B6{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-AA2{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AA4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-AA5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AB4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-AB5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N1{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N2{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-N3{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-N4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-N5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N6{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N7{fill:url(#streaks-darker);mix-blend-mode:lighten}.light-code{display: block}.dark-code{display: none}]]></style><g id=\"com\"><g class=\"shape\" ><rect x=\"12.000000\" y=\"12.000000\" width=\"433.000000\" height=\"366.000000\" class=\" stroke-B1 fill-B4\" style=\"stroke-width:2;\" /></g><text x=\"228.500000\" y=\"45.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:28px\">com</text></g><g id=\"com.thealgorithms\"><g class=\"shape\" ><rect x=\"62.000000\" y=\"62.000000\" width=\"333.000000\" height=\"266.000000\" class=\" stroke-B1 fill-B5\" style=\"stroke-width:2;\" /></g><text x=\"228.500000\" y=\"91.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:24px\">thealgorithms</text></g><g id=\"com.thealgorithms.backtracking\"><g class=\"shape\" ><rect x=\"112.000000\" y=\"112.000000\" width=\"233.000000\" height=\"166.000000\" class=\" stroke-B1 fill-B6\" style=\"stroke-width:2;\" /></g><text x=\"228.500000\" y=\"137.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:20px\">backtracking</text></g><g id=\"com.thealgorithms.backtracking.KnightsTour\"><g class=\"shape\" ><rect x=\"162.000000\" y=\"162.000000\" width=\"133.000000\" height=\"66.000000\" fill=\"#26de81\" class=\" stroke-B1\" style=\"stroke-width:0;\" /></g><text x=\"228.500000\" y=\"200.500000\" fill=\"#151719\" class=\"text-bold\" style=\"text-anchor:middle;font-size:16px\">KnightsTour</text></g><mask id=\"d2-3277132633\" maskUnits=\"userSpaceOnUse\" x=\"11\" y=\"11\" width=\"435\" height=\"368\">\n<rect x=\"11\" y=\"11\" width=\"435\" height=\"368\" fill=\"white\"></rect>\n<rect x=\"204.000000\" y=\"17.000000\" width=\"49\" height=\"36\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"157.500000\" y=\"67.000000\" width=\"142\" height=\"31\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"174.500000\" y=\"117.000000\" width=\"108\" height=\"26\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"184.500000\" y=\"184.500000\" width=\"88\" height=\"21\" fill=\"rgba(0,0,0,0.75)\"></rect>\n</mask></svg></svg>\n",
+          "d2_src": "direction: down\n\nvars: {\n  d2-config: {\n    pad: 0\n    theme-overrides: {\n      B1: \"#717D86\"\n      B2: \"#717D86\"\n      B3: \"#ffff00\"\n      B4: \"#151719\"\n      B5: \"#151719\"\n      B6: \"#151719\"\n      N1: \"#ECEDED\"\n      N7: \"#151719\"\n      AA2: \"#ECEDED\"\n    }\n  }\n}\n\nstyle: {\n  fill: \"#151719\"\n}\ncom.thealgorithms.backtracking.KnightsTour: {\n  style: {\n    fill: \"#26de81\"\n    font-color: \"#151719\"\n    stroke-width: 0\n  }\n}\n"
+        },
+        "items": [
+          {
+            "id": "fe37913a-93f7-7d91-9245-03a3bf17d809",
+            "ancestors": [],
+            "description": "Is designed to solve a chess-like problem where a knight moves around a grid of cells, filling in empty cells with numbers from 1 to total without breaking any constraints. The class uses a recursive algorithm to solve the problem and provides a method to print the solution as a 2D array.",
+            "name": "KnightsTour",
+            "location": {
+              "start": 4,
+              "insert": 4,
+              "offset": " ",
+              "indent": 0,
+              "comment": null
+            },
+            "item_type": "class",
+            "length": 195,
+            "docLength": null
+          },
+          {
+            "id": "11769796-c123-fb9e-4a4e-430bdfadbd0f",
+            "ancestors": [
+              "fe37913a-93f7-7d91-9245-03a3bf17d809"
+            ],
+            "description": "Calculates the number of elements in a collection by iterating through linked nodes, incrementing a counter until it reaches the maximum integer value or until all nodes are traversed. It handles the case where the count exceeds the maximum integer value and returns the calculated size.",
+            "params": [],
+            "returns": {
+              "type_name": "integer",
+              "description": "the number of non-null elements in the list.\n\nThe output is an integer value representing the count of nodes in the list. The count is limited to `Integer.MAX_VALUE`, beyond which no more elements can be counted. If the count exceeds this limit, it breaks out of the loop and returns the current count.",
+              "complex_type": true
+            },
+            "usage": {
+              "language": "java",
+              "code": "KnightsTour knightsTour = new KnightsTour();\nSystem.out.println(knightsTour.size());",
+              "description": ""
+            },
+            "name": "size",
+            "location": {
+              "start": 5,
+              "insert": 5,
+              "offset": " ",
+              "indent": 4,
+              "comment": null
+            },
+            "item_type": "method",
+            "length": 13,
+            "docLength": null
+          },
+          {
+            "id": "32a270bf-3dcd-1882-cd4c-50a207cf8ca6",
+            "ancestors": [
+              "fe37913a-93f7-7d91-9245-03a3bf17d809"
+            ],
+            "description": "Initializes a grid and solves a Sudoku puzzle with a given size (`base`). It randomly places a number on the grid, attempts to solve it using a recursive algorithm, and prints the result if successful or displays \"no result\" otherwise.",
+            "params": [
+              {
+                "name": "args",
+                "type_name": "String[]",
+                "description": "command-line arguments passed to the program, which are not used in this code snippet.\n\nArray of type `String`, representing command-line arguments. Its size is represented by `args.length`.",
+                "complex_type": true
+              }
+            ],
+            "name": "main",
+            "location": {
+              "start": 42,
+              "insert": 34,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 33,
+                "end": 41
+              }
+            },
+            "item_type": "method",
+            "length": 23,
+            "docLength": 8
+          },
+          {
+            "id": "73d6daee-31c6-478d-a145-a530961c6f3d",
+            "ancestors": [
+              "fe37913a-93f7-7d91-9245-03a3bf17d809"
+            ],
+            "description": "Recursively searches for a solution to fill an m × n grid with unique numbers from 1 to total. It starts by checking if the current count exceeds the total, and then iterates over neighboring cells, assigning values and calling itself until it detects an orphan cell or exhausts all possibilities.",
+            "params": [
+              {
+                "name": "row",
+                "type_name": "int",
+                "description": "0-based row index of the current cell being processed and is updated accordingly during the recursive search process.",
+                "complex_type": false
+              },
+              {
+                "name": "column",
+                "type_name": "int",
+                "description": "2D array index for the current cell being processed, along with the corresponding `row`, to facilitate updating and backtracking through the grid during the solving process.",
+                "complex_type": false
+              },
+              {
+                "name": "count",
+                "type_name": "int",
+                "description": "current number being placed on the grid, with its value incrementing for each recursive call and used to determine whether the placement is valid or not.",
+                "complex_type": false
+              }
+            ],
+            "returns": {
+              "type_name": "boolean",
+              "description": "a boolean indicating whether a solution is found.",
+              "complex_type": false
+            },
+            "name": "solve",
+            "location": {
+              "start": 82,
+              "insert": 66,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 65,
+                "end": 81
+              }
+            },
+            "item_type": "method",
+            "length": 25,
+            "docLength": 16
+          },
+          {
+            "id": "badd5a73-8d90-b0b4-cc46-8219f2377b70",
+            "ancestors": [
+              "fe37913a-93f7-7d91-9245-03a3bf17d809"
+            ],
+            "description": "Iterates through a list of moves and generates all neighboring cells for each move within the grid. It checks if the neighboring cell is empty, counts the number of neighbors with value 0, and adds it to a list along with the coordinates of the neighbor.",
+            "params": [
+              {
+                "name": "row",
+                "type_name": "int",
+                "description": "0-based index of the row in a grid for which the neighboring cells are to be found and processed.",
+                "complex_type": false
+              },
+              {
+                "name": "column",
+                "type_name": "int",
+                "description": "0-based index of the column in the grid where the neighboring cells are to be checked for the presence of unvisited cells.",
+                "complex_type": false
+              }
+            ],
+            "returns": {
+              "type_name": "List",
+              "description": "a list of integer arrays representing neighboring cells with their counts.\n\nReturns a list of arrays containing three integers, representing coordinates and a count of neighboring cells with value 0 in a grid. The first two integers denote the row and column indices of a cell, while the third integer represents the number of neighboring cells with value 0.",
+              "complex_type": true
+            },
+            "name": "neighbors",
+            "location": {
+              "start": 120,
+              "insert": 108,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 107,
+                "end": 119
+              }
+            },
+            "item_type": "method",
+            "length": 13,
+            "docLength": 12
+          },
+          {
+            "id": "9377d040-a2a2-1985-7d41-885c0b09a58c",
+            "ancestors": [
+              "fe37913a-93f7-7d91-9245-03a3bf17d809"
+            ],
+            "description": "Calculates the number of neighboring cells with value 0 in a given grid at a specified row and column based on predefined moves. It iterates through the moves array, checks for adjacent cells with value 0, and increments the count accordingly.",
+            "params": [
+              {
+                "name": "row",
+                "type_name": "int",
+                "description": "1D index of a cell in the grid for which the number of live neighbors is to be counted.",
+                "complex_type": false
+              },
+              {
+                "name": "column",
+                "type_name": "int",
+                "description": "0-indexed column position of an element in the grid that is being checked for neighboring cells.",
+                "complex_type": false
+              }
+            ],
+            "returns": {
+              "type_name": "integer",
+              "description": "an integer representing the number of adjacent zeros.",
+              "complex_type": false
+            },
+            "name": "countNeighbors",
+            "location": {
+              "start": 145,
+              "insert": 134,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 133,
+                "end": 144
+              }
+            },
+            "item_type": "method",
+            "length": 9,
+            "docLength": 11
+          },
+          {
+            "id": "df512221-721d-c6a9-0b49-af21441b9569",
+            "ancestors": [
+              "fe37913a-93f7-7d91-9245-03a3bf17d809"
+            ],
+            "description": "Checks for the presence of an orphan cell in a grid by examining neighboring cells and their live neighbor count. It returns true if at least one cell with no live neighbors is found, indicating an orphan; otherwise, it returns false.",
+            "params": [
+              {
+                "name": "count",
+                "type_name": "int",
+                "description": "number of cells with no neighbors in the current row and column that have been counted so far, used to determine if an orphan has been detected.",
+                "complex_type": false
+              },
+              {
+                "name": "row",
+                "type_name": "int",
+                "description": "2D grid's row index, used to retrieve neighboring cells for the cell at the specified position and check if any of them are orphaned.",
+                "complex_type": false
+              },
+              {
+                "name": "column",
+                "type_name": "int",
+                "description": "1-based column index of a cell being evaluated, used to retrieve its neighboring cells.",
+                "complex_type": false
+              }
+            ],
+            "returns": {
+              "type_name": "boolean",
+              "description": "a boolean indicating whether an orphan has been detected.",
+              "complex_type": false
+            },
+            "name": "orphanDetected",
+            "location": {
+              "start": 171,
+              "insert": 155,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 154,
+                "end": 170
+              }
+            },
+            "item_type": "method",
+            "length": 11,
+            "docLength": 16
+          },
+          {
+            "id": "6f903f48-95c9-8588-2d48-7dc630162155",
+            "ancestors": [
+              "fe37913a-93f7-7d91-9245-03a3bf17d809"
+            ],
+            "description": "Iterates over a two-dimensional grid, skipping any elements with value -1, and prints each non-skipped element with leading spaces to ensure alignment, followed by a newline character at the end of each row.",
+            "params": [],
+            "name": "printResult",
+            "location": {
+              "start": 187,
+              "insert": 183,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 182,
+                "end": 186
+              }
+            },
+            "item_type": "method",
+            "length": 11,
+            "docLength": 4
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "test.java",
+    "path": "test.java",
+    "content": {
+      "structured": {
+        "description": "An IIRFilter class that implements an Infinite Impulse Response (IIR) filter, a type of digital filter commonly used in signal processing and control systems. The filter uses neural network-like architecture with feedback mechanism, allowing it to apply weighted sum of past values to predict future output. It allows users to set custom coefficients for the filter using setCoeffs method and applies them to process input samples using process method.",
+        "diagram": {
+          "gviz": "",
+          "d2": "<?xml version=\"1.0\" encoding=\"utf-8\"?><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" d2Version=\"v0.6.5\" preserveAspectRatio=\"xMinYMin meet\" viewBox=\"0 0 405 368\"><svg id=\"d2-svg\" class=\"d2-1111860978\" width=\"405\" height=\"368\" viewBox=\"11 11 405 368\"><rect x=\"11.000000\" y=\"11.000000\" width=\"405.000000\" height=\"368.000000\" rx=\"0.000000\" fill=\"#151719\" stroke-width=\"0\" /><style type=\"text/css\"><![CDATA[\n.d2-1111860978 .text {\n\tfont-family: \"d2-1111860978-font-regular\";\n}\n@font-face {\n\tfont-family: d2-1111860978-font-regular;\n\tsrc: url(\"data:application/font-woff;base64,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\");\n}\n.d2-1111860978 .text-bold {\n\tfont-family: \"d2-1111860978-font-bold\";\n}\n@font-face {\n\tfont-family: d2-1111860978-font-bold;\n\tsrc: url(\"data:application/font-woff;base64,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\");\n}]]></style><style type=\"text/css\"><![CDATA[.shape {\n  shape-rendering: geometricPrecision;\n  stroke-linejoin: round;\n}\n.connection {\n  stroke-linecap: round;\n  stroke-linejoin: round;\n}\n.blend {\n  mix-blend-mode: multiply;\n  opacity: 0.5;\n}\n\n\t\t.d2-1111860978 .fill-N1{fill:#ECEDED;}\n\t\t.d2-1111860978 .fill-N2{fill:#676C7E;}\n\t\t.d2-1111860978 .fill-N3{fill:#9499AB;}\n\t\t.d2-1111860978 .fill-N4{fill:#CFD2DD;}\n\t\t.d2-1111860978 .fill-N5{fill:#DEE1EB;}\n\t\t.d2-1111860978 .fill-N6{fill:#EEF1F8;}\n\t\t.d2-1111860978 .fill-N7{fill:#151719;}\n\t\t.d2-1111860978 .fill-B1{fill:#717D86;}\n\t\t.d2-1111860978 .fill-B2{fill:#717D86;}\n\t\t.d2-1111860978 .fill-B3{fill:#ffff00;}\n\t\t.d2-1111860978 .fill-B4{fill:#151719;}\n\t\t.d2-1111860978 .fill-B5{fill:#151719;}\n\t\t.d2-1111860978 .fill-B6{fill:#151719;}\n\t\t.d2-1111860978 .fill-AA2{fill:#ECEDED;}\n\t\t.d2-1111860978 .fill-AA4{fill:#CFD2DD;}\n\t\t.d2-1111860978 .fill-AA5{fill:#DEE1EB;}\n\t\t.d2-1111860978 .fill-AB4{fill:#CFD2DD;}\n\t\t.d2-1111860978 .fill-AB5{fill:#DEE1EB;}\n\t\t.d2-1111860978 .stroke-N1{stroke:#ECEDED;}\n\t\t.d2-1111860978 .stroke-N2{stroke:#676C7E;}\n\t\t.d2-1111860978 .stroke-N3{stroke:#9499AB;}\n\t\t.d2-1111860978 .stroke-N4{stroke:#CFD2DD;}\n\t\t.d2-1111860978 .stroke-N5{stroke:#DEE1EB;}\n\t\t.d2-1111860978 .stroke-N6{stroke:#EEF1F8;}\n\t\t.d2-1111860978 .stroke-N7{stroke:#151719;}\n\t\t.d2-1111860978 .stroke-B1{stroke:#717D86;}\n\t\t.d2-1111860978 .stroke-B2{stroke:#717D86;}\n\t\t.d2-1111860978 .stroke-B3{stroke:#ffff00;}\n\t\t.d2-1111860978 .stroke-B4{stroke:#151719;}\n\t\t.d2-1111860978 .stroke-B5{stroke:#151719;}\n\t\t.d2-1111860978 .stroke-B6{stroke:#151719;}\n\t\t.d2-1111860978 .stroke-AA2{stroke:#ECEDED;}\n\t\t.d2-1111860978 .stroke-AA4{stroke:#CFD2DD;}\n\t\t.d2-1111860978 .stroke-AA5{stroke:#DEE1EB;}\n\t\t.d2-1111860978 .stroke-AB4{stroke:#CFD2DD;}\n\t\t.d2-1111860978 .stroke-AB5{stroke:#DEE1EB;}\n\t\t.d2-1111860978 .background-color-N1{background-color:#ECEDED;}\n\t\t.d2-1111860978 .background-color-N2{background-color:#676C7E;}\n\t\t.d2-1111860978 .background-color-N3{background-color:#9499AB;}\n\t\t.d2-1111860978 .background-color-N4{background-color:#CFD2DD;}\n\t\t.d2-1111860978 .background-color-N5{background-color:#DEE1EB;}\n\t\t.d2-1111860978 .background-color-N6{background-color:#EEF1F8;}\n\t\t.d2-1111860978 .background-color-N7{background-color:#151719;}\n\t\t.d2-1111860978 .background-color-B1{background-color:#717D86;}\n\t\t.d2-1111860978 .background-color-B2{background-color:#717D86;}\n\t\t.d2-1111860978 .background-color-B3{background-color:#ffff00;}\n\t\t.d2-1111860978 .background-color-B4{background-color:#151719;}\n\t\t.d2-1111860978 .background-color-B5{background-color:#151719;}\n\t\t.d2-1111860978 .background-color-B6{background-color:#151719;}\n\t\t.d2-1111860978 .background-color-AA2{background-color:#ECEDED;}\n\t\t.d2-1111860978 .background-color-AA4{background-color:#CFD2DD;}\n\t\t.d2-1111860978 .background-color-AA5{background-color:#DEE1EB;}\n\t\t.d2-1111860978 .background-color-AB4{background-color:#CFD2DD;}\n\t\t.d2-1111860978 .background-color-AB5{background-color:#DEE1EB;}\n\t\t.d2-1111860978 .color-N1{color:#ECEDED;}\n\t\t.d2-1111860978 .color-N2{color:#676C7E;}\n\t\t.d2-1111860978 .color-N3{color:#9499AB;}\n\t\t.d2-1111860978 .color-N4{color:#CFD2DD;}\n\t\t.d2-1111860978 .color-N5{color:#DEE1EB;}\n\t\t.d2-1111860978 .color-N6{color:#EEF1F8;}\n\t\t.d2-1111860978 .color-N7{color:#151719;}\n\t\t.d2-1111860978 .color-B1{color:#717D86;}\n\t\t.d2-1111860978 .color-B2{color:#717D86;}\n\t\t.d2-1111860978 .color-B3{color:#ffff00;}\n\t\t.d2-1111860978 .color-B4{color:#151719;}\n\t\t.d2-1111860978 .color-B5{color:#151719;}\n\t\t.d2-1111860978 .color-B6{color:#151719;}\n\t\t.d2-1111860978 .color-AA2{color:#ECEDED;}\n\t\t.d2-1111860978 .color-AA4{color:#CFD2DD;}\n\t\t.d2-1111860978 .color-AA5{color:#DEE1EB;}\n\t\t.d2-1111860978 .color-AB4{color:#CFD2DD;}\n\t\t.d2-1111860978 .color-AB5{color:#DEE1EB;}.appendix text.text{fill:#ECEDED}.md{--color-fg-default:#ECEDED;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#151719;--color-canvas-subtle:#EEF1F8;--color-border-default:#717D86;--color-border-muted:#717D86;--color-neutral-muted:#EEF1F8;--color-accent-fg:#717D86;--color-accent-emphasis:#717D86;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.sketch-overlay-B1{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-B2{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-B3{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-B4{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-B5{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-B6{fill:url(#streaks-darker);mix-blend-mode:lighten}.sketch-overlay-AA2{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AA4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-AA5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-AB4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-AB5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N1{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N2{fill:url(#streaks-dark);mix-blend-mode:overlay}.sketch-overlay-N3{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-N4{fill:url(#streaks-normal);mix-blend-mode:color-burn}.sketch-overlay-N5{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N6{fill:url(#streaks-bright);mix-blend-mode:darken}.sketch-overlay-N7{fill:url(#streaks-darker);mix-blend-mode:lighten}.light-code{display: block}.dark-code{display: none}]]></style><g id=\"com\"><g class=\"shape\" ><rect x=\"12.000000\" y=\"12.000000\" width=\"403.000000\" height=\"366.000000\" class=\" stroke-B1 fill-B4\" style=\"stroke-width:2;\" /></g><text x=\"213.500000\" y=\"45.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:28px\">com</text></g><g id=\"com.thealgorithms\"><g class=\"shape\" ><rect x=\"62.000000\" y=\"62.000000\" width=\"303.000000\" height=\"266.000000\" class=\" stroke-B1 fill-B5\" style=\"stroke-width:2;\" /></g><text x=\"213.500000\" y=\"91.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:24px\">thealgorithms</text></g><g id=\"com.thealgorithms.audiofilters\"><g class=\"shape\" ><rect x=\"112.000000\" y=\"112.000000\" width=\"203.000000\" height=\"166.000000\" class=\" stroke-B1 fill-B6\" style=\"stroke-width:2;\" /></g><text x=\"213.500000\" y=\"137.000000\" class=\"text fill-N1\" style=\"text-anchor:middle;font-size:20px\">audiofilters</text></g><g id=\"com.thealgorithms.audiofilters.IIRFilter\"><g class=\"shape\" ><rect x=\"162.000000\" y=\"162.000000\" width=\"103.000000\" height=\"66.000000\" fill=\"#26de81\" class=\" stroke-B1\" style=\"stroke-width:0;\" /></g><text x=\"213.500000\" y=\"200.500000\" fill=\"#151719\" class=\"text-bold\" style=\"text-anchor:middle;font-size:16px\">IIRFilter</text></g><mask id=\"d2-1111860978\" maskUnits=\"userSpaceOnUse\" x=\"11\" y=\"11\" width=\"405\" height=\"368\">\n<rect x=\"11\" y=\"11\" width=\"405\" height=\"368\" fill=\"white\"></rect>\n<rect x=\"189.000000\" y=\"17.000000\" width=\"49\" height=\"36\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"142.500000\" y=\"67.000000\" width=\"142\" height=\"31\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"166.000000\" y=\"117.000000\" width=\"95\" height=\"26\" fill=\"rgba(0,0,0,0.75)\"></rect>\n<rect x=\"184.500000\" y=\"184.500000\" width=\"58\" height=\"21\" fill=\"rgba(0,0,0,0.75)\"></rect>\n</mask></svg></svg>\n",
+          "d2_src": "direction: down\n\nvars: {\n  d2-config: {\n    pad: 0\n    theme-overrides: {\n      B1: \"#717D86\"\n      B2: \"#717D86\"\n      B3: \"#ffff00\"\n      B4: \"#151719\"\n      B5: \"#151719\"\n      B6: \"#151719\"\n      N1: \"#ECEDED\"\n      N7: \"#151719\"\n      AA2: \"#ECEDED\"\n    }\n  }\n}\n\nstyle: {\n  fill: \"#151719\"\n}\ncom.thealgorithms.audiofilters.IIRFilter: {\n  style: {\n    fill: \"#26de81\"\n    font-color: \"#151719\"\n    stroke-width: 0\n  }\n}\n"
+        },
+        "items": [
+          {
+            "id": "bf0e6c9d-153d-deaa-224b-eec028022be7",
+            "ancestors": [],
+            "description": "Implements an Infinite Impulse Response (IIR) filter with adjustable order and coefficients. It takes in sample values and applies a weighted sum of past values using the given coefficients, updating history vectors through feedback. The output is a forecasted value representing the target variable.",
+            "name": "IIRFilter",
+            "location": {
+              "start": 9,
+              "insert": 3,
+              "offset": " ",
+              "indent": 0,
+              "comment": {
+                "start": 2,
+                "end": 8
+              }
+            },
+            "item_type": "class",
+            "length": 84,
+            "docLength": 6
+          },
+          {
+            "id": "00dbb9f0-fdd7-c0a6-f04b-6e29ade9adc7",
+            "ancestors": [
+              "bf0e6c9d-153d-deaa-224b-eec028022be7"
+            ],
+            "description": "Sets coefficients for polynomial equation from provided arrays. It checks if input arrays have correct length and first element of first array is not zero, then copies elements to internal arrays. If conditions are not met, it throws an exception.",
+            "params": [
+              {
+                "name": "aCoeffs",
+                "type_name": "double[]",
+                "description": "1D array of coefficients for which the length must match the order, and its first element cannot be zero, upon successful validation allowing for assignment to internal arrays `coeffsA`.\n\nIt must have a length equal to the order and its first element cannot be zero.",
+                "complex_type": true
+              },
+              {
+                "name": "bCoeffs",
+                "type_name": "double[]",
+                "description": "coefficients of another polynomial, which are stored in the `coeffsB` array if the lengths of `bCoeffs` and `aCoeffs` match the order of the polynomial.\n\n",
+                "complex_type": true
+              }
+            ],
+            "usage": {
+              "language": "java",
+              "code": "double[] aCoeffs = {1.0, 2.0};\ndouble[] bCoeffs = {3.0, 4.0};\n\ntry {\n    filter.setCoeffs(aCoeffs, bCoeffs);\n} catch (IllegalArgumentException e) {\n    System.out.println(e.getMessage());\n}\n",
+              "description": ""
+            },
+            "name": "setCoeffs",
+            "location": {
+              "start": 44,
+              "insert": 35,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 34,
+                "end": 43
+              }
+            },
+            "item_type": "method",
+            "length": 18,
+            "docLength": 9
+          },
+          {
+            "id": "5dff0fba-28e0-d285-3e49-1d4bdbe8f946",
+            "ancestors": [
+              "bf0e6c9d-153d-deaa-224b-eec028022be7"
+            ],
+            "description": "Updates a feedback filter using the provided `sample`. It calculates the new output by processing the previous input and output values, updating the internal state with the sample, and returning the resulting value. The calculation involves weighted sums of past inputs and outputs.",
+            "params": [
+              {
+                "name": "sample",
+                "type_name": "double",
+                "description": "new value to be processed and updated by the feedback mechanism, which is used to compute the output result.",
+                "complex_type": false
+              }
+            ],
+            "returns": {
+              "type_name": "double",
+              "description": "a double value, the processed sample.",
+              "complex_type": false
+            },
+            "usage": {
+              "language": "java",
+              "code": "IIRFilter filter = new IIRFilter(3);\nfilter.setCoeffs(new double[] {0.1, 0.2, -0.5}, new double[] {-0.7, 0.8});\ndouble result = filter.process(4.0);\n",
+              "description": ""
+            },
+            "name": "process",
+            "location": {
+              "start": 72,
+              "insert": 63,
+              "offset": " ",
+              "indent": 4,
+              "comment": {
+                "start": 62,
+                "end": 71
+              }
+            },
+            "item_type": "method",
+            "length": 20,
+            "docLength": 9
+          }
+        ]
+      }
+    }
+  }
+]

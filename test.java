@@ -1,10 +1,10 @@
 package com.thealgorithms.audiofilters;
 
 /**
- * takes in an integer `order` and creates internal arrays for coefficients `coeffsA`
- * and `coeffsB`, as well as history vectors `historyX` and `historyY`. The `setCoeffs()`
- * method sets the coefficients for the neural network, and the `process()` method
- * applies a weighted sum of past values and updates the history vectors using feedback.
+ * Implements an Infinite Impulse Response (IIR) filter with adjustable order and
+ * coefficients. It takes in sample values and applies a weighted sum of past values
+ * using the given coefficients, updating history vectors through feedback. The output
+ * is a forecasted value representing the target variable.
  */
 public class IIRFilter {
 
@@ -33,13 +33,18 @@ public class IIRFilter {
 
     
     /**
-     * sets the coefficients for a neural network. It checks if the input arrays have the
-     * correct length and does not allow zero values in the first position, then assigns
-     * the coefficients to internal arrays.
+     * Sets coefficients for polynomial equation from provided arrays. It checks if input
+     * arrays have correct length and first element of first array is not zero, then
+     * copies elements to internal arrays. If conditions are not met, it throws an exception.
      * 
-     * @param aCoeffs 1st polynomial coefficients.
+     * @param aCoeffs 1D array of coefficients for which the length must match the order,
+     * and its first element cannot be zero, upon successful validation allowing for
+     * assignment to internal arrays `coeffsA`.
      * 
-     * @param bCoeffs 2nd set of coefficients to be multiplied with the `aCoeffs`.
+     * It must have a length equal to the order and its first element cannot be zero.
+     * 
+     * @param bCoeffs coefficients of another polynomial, which are stored in the `coeffsB`
+     * array if the lengths of `bCoeffs` and `aCoeffs` match the order of the polynomial.
      */
     public void setCoeffs(double[] aCoeffs, double[] bCoeffs) throws IllegalArgumentException {
         if (aCoeffs.length != order) {
@@ -61,13 +66,15 @@ public class IIRFilter {
     }
 
     /**
-     * takes a sample value and applies a weighted sum of past values based on an order-0
-     * coeffients, updates history vectors using feedback mechanism.
+     * Updates a feedback filter using the provided `sample`. It calculates the new output
+     * by processing the previous input and output values, updating the internal state
+     * with the sample, and returning the resulting value. The calculation involves
+     * weighted sums of past inputs and outputs.
      * 
-     * @param sample 0th element of the sequence being processed, which is used to
-     * initialize the feedforward network's inputs.
+     * @param sample new value to be processed and updated by the feedback mechanism,
+     * which is used to compute the output result.
      * 
-     * @returns a calculated value representing the forecasted value of the target variable.
+     * @returns a double value, the processed sample.
      */
     public double process(double sample) {
         double result = 0.0;
