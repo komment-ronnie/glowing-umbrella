@@ -2,7 +2,25 @@ package com.thealgorithms.backtracking;
 import java.util.*;
 
 
+/**
+ * Is designed to solve a chess-like puzzle by recursively filling a grid with numbers
+ * from 1 to total without breaking any constraints. The class uses a knight's moves
+ * to traverse the grid and checks for orphaned cells, returning true if the puzzle
+ * has been solved or false otherwise.
+ */
 public class KnightsTour {
+    /**
+     * Calculates the number of elements in a collection. It iterates through each node,
+     * increments a counter for each non-null element, and returns the total count. The
+     * iteration continues until it reaches the end of the list or encounters an integer
+     * overflow.
+     * 
+     * @returns an integer representing the number of non-null elements in the collection.
+     * 
+     * The output is an integer value representing the number of elements in the collection.
+     * It is bounded by Integer.MAX_VALUE, meaning that if the actual size exceeds this
+     * limit, the returned value will be equal to Integer.MAX_VALUE.
+     */
     public int size() {
         restartFromHead: for (;;) {
             int count = 0;
